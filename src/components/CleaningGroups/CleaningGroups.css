@@ -1,0 +1,80 @@
+/* CleaningGroups.css */
+.cg-wrap {
+  animation: fadeUp .35s ease;
+}
+
+.cg-note {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .82rem; color: #8b6020;
+  background: #fffbf0; border: 1.5px solid #ffe0a0;
+  border-radius: 10px; padding: .65rem .95rem;
+  margin-bottom: 1rem; line-height: 1.65;
+}
+
+.cg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: .85rem;
+}
+
+.cg-card {
+  background: color-mix(in srgb, var(--cc) 5%, white);
+  border: 1.5px solid color-mix(in srgb, var(--cc) 20%, transparent);
+  border-radius: 14px; padding: 1rem;
+  animation: fadeUp .38s ease both;
+  transition: box-shadow .2s, transform .2s;
+}
+.cg-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--cc) 14%, transparent);
+}
+
+.cg-day-header {
+  display: flex; align-items: center; gap: .6rem;
+  padding-bottom: .65rem; margin-bottom: .65rem;
+  border-bottom: 1.5px dashed color-mix(in srgb, var(--cc) 28%, transparent);
+}
+
+.cg-day-icon { font-size: 1.4rem; }
+
+.cg-day-name {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .88rem; font-weight: 800; color: #2d1a00;
+}
+
+.cg-member-count {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .7rem; color: var(--cc); font-weight: 700;
+}
+
+.cg-members {
+  display: flex; flex-direction: column; gap: .28rem;
+}
+
+.cg-member {
+  display: flex; align-items: center; gap: .45rem;
+  animation: fadeUp .32s ease both;
+  padding: .2rem .3rem; border-radius: 6px;
+  transition: background .15s;
+}
+.cg-member:hover {
+  background: color-mix(in srgb, var(--cc) 8%, white);
+}
+
+.cg-member-avatar { font-size: .9rem; flex-shrink: 0; }
+.cg-member-name {
+  font-family: "Nunito", sans-serif;
+  font-size: .8rem; font-weight: 700; color: #5a3a0a;
+}
+
+@media (max-width: 480px) {
+  .cg-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 340px) {
+  .cg-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

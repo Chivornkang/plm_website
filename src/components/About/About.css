@@ -1,0 +1,158 @@
+.page-hero {
+  position: relative;
+  padding: 4rem 0 3rem;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 100% at 50% 0%, rgba(201,151,42,0.07) 0%, transparent 70%);
+  border-bottom: 1px solid var(--border);
+}
+.page-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--gold-light);
+  margin: 0.4rem 0 0.2rem;
+}
+.page-hero-sub {
+  font-family: 'Noto Serif Khmer', serif;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.about-content { padding: 3rem 0; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  align-items: start;
+}
+
+.about-info-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.about-info-header {
+  background: rgba(201,151,42,0.08);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.about-info-icon { font-size: 1.5rem; }
+.about-info-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--gold-light);
+  flex: 1;
+}
+.about-info-header p {
+  font-family: 'Noto Serif Khmer', serif;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  width: 100%;
+  margin-top: -0.3rem;
+}
+.about-info-rows { padding: 0.5rem 0; }
+.about-info-row {
+  display: flex;
+  padding: 0.7rem 1.5rem;
+  border-bottom: 1px solid rgba(201,151,42,0.08);
+  gap: 1rem;
+  align-items: flex-start;
+  transition: background var(--transition);
+}
+.about-info-row:last-child { border-bottom: none; }
+.about-info-row:hover { background: rgba(201,151,42,0.04); }
+.about-info-label {
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+}
+.about-info-label span:first-child { font-size: 0.78rem; color: var(--gold); font-weight: 500; }
+.about-info-label .km { font-family: 'Noto Serif Khmer', serif; font-size: 0.68rem; color: var(--text-dim); }
+.about-info-val {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.about-info-val span:first-child { font-size: 0.85rem; color: var(--text-muted); }
+.about-info-val .km { font-family: 'Noto Serif Khmer', serif; font-size: 0.72rem; color: var(--text-dim); }
+
+.mission-block { display: flex; flex-direction: column; gap: 1rem; }
+.mission-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.mission-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-card); }
+.mission-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.mission-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold-light);
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+.km-small {
+  font-family: 'Noto Serif Khmer', serif;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.mission-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+.mission-text.km {
+  font-family: 'Noto Serif Khmer', serif;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+/* Values */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.value-card {
+  padding: 1.4rem 1.1rem;
+  text-align: center;
+  cursor: default;
+}
+.value-emoji { font-size: 2rem; margin-bottom: 0.6rem; }
+.value-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--gold-light);
+  margin-bottom: 2px;
+}
+.value-km {
+  font-family: 'Noto Serif Khmer', serif;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-bottom: 0.6rem;
+}
+.value-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .about-info-label { min-width: 85px; }
+}

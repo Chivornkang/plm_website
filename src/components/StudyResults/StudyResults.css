@@ -1,0 +1,255 @@
+/* StudyResults.css */
+
+/* ── Month selector ── */
+.sr-wrap { animation: fadeUp .35s ease; }
+
+.sr-selector-row {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.sr-latest-badge {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .82rem; color: #8b6020;
+  background: #fffbf0; border: 1.5px solid #ffe0a0;
+  border-radius: 999px; padding: .32rem .9rem;
+}
+.sr-latest-badge strong { color: var(--cc); }
+
+/* Dropdown */
+.sr-dropdown { position: relative; }
+
+.sr-drop-btn {
+  display: flex; align-items: center; gap: .5rem;
+  background: var(--cc); color: #fff; border: none;
+  border-radius: 999px; padding: .42rem 1.1rem;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .85rem; font-weight: 700;
+  cursor: pointer; transition: opacity .2s;
+}
+.sr-drop-btn:hover { opacity: .88; }
+.sr-drop-caret { font-size: .7rem; }
+
+.sr-drop-menu {
+  position: absolute; right: 0; top: calc(100% + 6px);
+  background: #fff; border: 2px solid var(--cc);
+  border-radius: 12px; min-width: 180px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.13);
+  z-index: 50; overflow: hidden;
+  animation: dropIn .2s cubic-bezier(.34,1.56,.64,1);
+}
+
+.sr-drop-label {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .7rem; font-weight: 700; color: #8b6020;
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: .55rem 1rem .35rem; border-bottom: 1px solid #ffe0a0;
+}
+
+.sr-drop-item {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; background: none; border: none;
+  padding: .65rem 1rem;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .88rem; font-weight: 600; color: #2d1a00;
+  cursor: pointer; transition: background .15s;
+}
+.sr-drop-item:hover { background: color-mix(in srgb, var(--cc) 8%, white); }
+.sr-drop-active { color: var(--cc); font-weight: 800; }
+
+.sr-drop-new {
+  font-size: .67rem; font-weight: 800; color: #fff;
+  background: var(--cc); border-radius: 999px; padding: .1rem .5rem;
+}
+
+/* ── Section label ── */
+.sr-section-label {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .9rem; font-weight: 800; color: #2d1a00;
+  margin-bottom: .9rem;
+}
+
+/* ── Podium ── */
+.podium-row {
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: .7rem; margin-bottom: 1.5rem;
+}
+.pod-col {
+  display: flex; flex-direction: column; align-items: center;
+  gap: .35rem; flex: 1; max-width: 200px;
+}
+.pod-medal { font-size: 2rem; }
+
+.cert {
+  width: 100%; background: var(--rcbg); border: 2px solid var(--rcbd);
+  border-radius: 14px; padding: .9rem .7rem; text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08); transition: transform .2s;
+}
+.cert:hover { transform: translateY(-3px); }
+.pod-gold .cert { transform: scale(1.07); }
+.pod-gold .cert:hover { transform: scale(1.07) translateY(-3px); }
+
+.cert-rank {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .67rem; font-weight: 800; color: var(--rc);
+  text-transform: uppercase; letter-spacing: .06em; margin-bottom: .2rem;
+}
+.cert-stars { color: var(--rc); font-size: .62rem; margin-bottom: .28rem; }
+.cert-name  { font-family: "Kantumruy Pro", sans-serif; font-size: .92rem; font-weight: 800; color: #2d1a00; margin-bottom: .28rem; }
+.cert-score { font-size: 1.5rem; font-weight: 900; color: var(--rc); line-height: 1; }
+.cert-score sup { font-size: .6rem; font-weight: 600; color: #8b6020; }
+.cert-seal { font-family: "Kantumruy Pro", sans-serif; font-size: .62rem; color: #8b6020; margin-top: .38rem; }
+
+.pod-stand {
+  width: 100%; border-radius: 6px 6px 0 0;
+}
+.pod-stand-1 { height: 50px; }
+.pod-stand-2 { height: 32px; }
+.pod-stand-3 { height: 20px; }
+
+/* ── Divider ── */
+.sr-pdf-divider {
+  display: flex; align-items: center; gap: .75rem;
+  margin: 1.5rem 0 1.1rem;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .9rem; font-weight: 800; color: #5a3a0a;
+}
+.sr-pdf-divider::before,
+.sr-pdf-divider::after {
+  content: ""; flex: 1; height: 2px;
+  background: linear-gradient(90deg, transparent, #ffe0a0, transparent);
+}
+
+/* ══════════════════════════════════════
+   PDF-style results card
+══════════════════════════════════════ */
+
+.pdf-wrap {
+  background: #fff;
+  border: 2px solid var(--cc);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.pdf-header {
+  background: linear-gradient(135deg, var(--cc), color-mix(in srgb, var(--cc) 65%, #ffd166));
+  color: #fff; padding: 1.4rem 1.6rem;
+  text-align: center;
+}
+
+.pdf-school {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .8rem; font-weight: 700; opacity: .9; margin-bottom: .35rem;
+}
+
+.pdf-title {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: 1.25rem; font-weight: 900; margin: 0 0 .65rem;
+}
+
+.pdf-meta-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.25rem; flex-wrap: wrap;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .8rem; font-weight: 600; opacity: .9;
+}
+
+.pdf-updated {
+  font-family: "Nunito", sans-serif;
+  font-size: .72rem; opacity: .75; margin-top: .45rem;
+}
+
+/* Table */
+.pdf-table-wrap { overflow-x: auto; }
+
+.pdf-table {
+  width: 100%; border-collapse: collapse;
+  font-family: "Kantumruy Pro", sans-serif; font-size: .85rem;
+}
+
+.pdf-table thead tr {
+  background: color-mix(in srgb, var(--cc) 9%, white);
+}
+.pdf-table th {
+  padding: .65rem .9rem; text-align: left;
+  font-size: .74rem; font-weight: 800; color: var(--cc);
+  letter-spacing: .04em; text-transform: uppercase;
+  border-bottom: 2px solid color-mix(in srgb, var(--cc) 20%, transparent);
+}
+
+.pdf-table td {
+  padding: .58rem .9rem; border-bottom: 1px solid #fff3d6;
+  vertical-align: middle;
+}
+
+.pdf-table tbody tr:last-child td { border-bottom: none; }
+.pdf-table tbody tr:hover { background: #fffbf0; }
+
+/* Top 3 rows */
+.pdf-top-1 { background: #fffbe6 !important; }
+.pdf-top-2 { background: #f8f8f8 !important; }
+.pdf-top-3 { background: #fff6ed !important; }
+
+.pdf-no   { color: #8b6020; font-weight: 700; width: 36px; }
+.pdf-rank { width: 40px; text-align: center; font-size: 1.1rem; }
+.pdf-name { font-weight: 700; color: #2d1a00; }
+
+/* Score cell */
+.pdf-score-row { display: flex; align-items: center; gap: .65rem; }
+
+.score-badge {
+  font-family: "Nunito", sans-serif;
+  font-size: .82rem; font-weight: 900;
+  border-radius: 6px; padding: .18rem .55rem;
+  flex-shrink: 0; min-width: 38px; text-align: center;
+}
+.badge-gold  { background: #fff8d6; color: #b8860b; border: 1.5px solid #ffd700; }
+.badge-green { background: #e8f8ee; color: #1a7a3a; border: 1.5px solid #22a67a; }
+.badge-blue  { background: #e8eeff; color: #2c3e8c; border: 1.5px solid #4169e1; }
+.badge-grey  { background: #f0f0f0; color: #666;    border: 1.5px solid #ccc;    }
+
+.pdf-bar-track {
+  flex: 1; height: 7px; background: #ffe0a0;
+  border-radius: 999px; overflow: hidden; min-width: 60px;
+}
+.pdf-bar-fill { height: 100%; border-radius: 999px; transition: width 1s cubic-bezier(.22,1,.36,1); }
+
+.pdf-grade-label {
+  font-size: .78rem; font-weight: 700; color: #5a3a0a;
+}
+
+/* PDF Footer */
+.pdf-footer {
+  padding: 1.1rem 1.6rem; background: #fffbf4;
+  border-top: 2px dashed color-mix(in srgb, var(--cc) 25%, transparent);
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: .78rem; color: #8b6020;
+}
+.pdf-sig-line {
+  width: 160px; height: 1.5px; background: #2d1a00;
+  margin: .6rem 0 .4rem;
+}
+.pdf-footer-school {
+  font-size: .72rem; color: #aaa; margin-top: .3rem;
+}
+
+/* Responsive */
+@media (max-width: 540px) {
+  .podium-row { gap: .35rem; }
+  .pod-gold .cert { transform: none; }
+  .pod-gold .cert:hover { transform: translateY(-2px); }
+  .cert { padding: .65rem .45rem; }
+  .cert-name { font-size: .8rem; }
+  .pdf-meta-row { gap: .75rem; }
+}
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-8px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

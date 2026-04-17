@@ -10,8 +10,15 @@ import Contact    from './components/Contact/Contact'
 import Loader     from './components/Loader/Loader'
 import './App.css'
 
+const pages = { home: Home, classes: Classes, about: About, management: Management, news: News, contact: Contact }
+
+function getPageFromPath() {
+  const path = window.location.pathname.replace('/', '').toLowerCase()
+  return pages[path] ? path : 'home'
+}
+
 export default function App() {
-  const [page, setPage] = useState('home')
+  const [page, setPage] = useState(getPageFromPath)
   const [loading, setLoading] = useState(true)
   const [pageTransition, setPageTransition] = useState(false)
 
@@ -20,8 +27,25 @@ export default function App() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Sync URL → state when user hits back/forward
+  useEffect(() => {
+    const onPopState = () => {
+      const newPage = getPageFromPath()
+      setPageTransition(true)
+      setTimeout(() => {
+        setPage(newPage)
+        setPageTransition(false)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }, 250)
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
+
   const navigate = (newPage) => {
     if (newPage === page) return
+    // Push the new path into browser history
+    window.history.pushState({ page: newPage }, '', `/${newPage}`)
     setPageTransition(true)
     setTimeout(() => {
       setPage(newPage)
@@ -30,7 +54,6 @@ export default function App() {
     }, 250)
   }
 
-  const pages = { home: Home,classes:Classes, about: About, management: Management, news: News, contact: Contact }
   const PageComponent = pages[page]
 
   return (

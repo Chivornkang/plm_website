@@ -47,7 +47,7 @@ export default function Classes() {
       {!selected && (
         <>
           <header className="page-header">
-            <div className="page-badge">🏫 {t("Pralay Meas Primary School","សាលាបឋមសិក្សាប្រឡាយមាស")}</div>
+            {/* <div className="page-badge">🏫 {t("Pralay Meas Primary School","សាលាបឋមសិក្សាប្រឡាយមាស")}</div> */}
             <h1 className="page-title">{t("Classes & Grades","ថ្នាក់ និង ថ្នាក់ទី")}</h1>
             <p className="page-sub">
               {t(

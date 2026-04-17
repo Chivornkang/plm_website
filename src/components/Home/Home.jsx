@@ -126,13 +126,13 @@ export default function Home({ navigate }) {
             </div>
           </div>
           <div className="info-strip-divider" />
-          <div className="info-strip-item">
+          {/* <div className="info-strip-item">
             <span className="strip-icon">📞</span>
             <div>
               <div className="strip-label">Phone / ទូរស័ព្ទសាលា</div>
               <div className="strip-val">[+855 031 636 396 3]</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

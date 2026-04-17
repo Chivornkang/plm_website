@@ -40,13 +40,13 @@ export default function TeacherCard({ teacher, color, lang }) {
           <div>
             <div className="tc-detail-label">{t("Email", "អ៊ីម៉ែល")}</div>
             <div className="tc-detail-val tc-email">{teacher.email}</div>
-          </div>
+          </div> 
         </div>
         <div className="tc-detail">
           <span className="tc-detail-icon">F</span>
           <div>
             <div className="tc-detail-label">{t("Facebook", "ហ្វេសប៊ុក")}</div>
-            <div className="tc-detail-val tc-email">{teacher.facebook}</div>
+            <div className="tc-detail-val tc-email">{teacher.metafb}</div>
           </div>
         </div>
       </div>

@@ -16,28 +16,37 @@ export default function About() {
       <div className="page-hero">
         <div className="page-hero-bg" />
         <div className="container">
-          <span className="badge animate-up">About Us / អំពីយើង</span>
-          <h1 className="page-hero-title animate-up delay-1">Our School</h1>
-          <p className="page-hero-sub animate-up delay-2">សាលាបឋមសិក្សាប្រឡាយមាស</p>
+          {/* <span className="badge animate-up">About Us / អំពីយើង</span> */}
+          {/* <img src="assets/logo/cambodia-flag-gif.gif" alt="" /> */}
+          <h1 className="page-hero-title animate-up delay-1">ព្រះរាជាណាចក្រកម្ពុជា</h1>
+          <h1 className="page-hero-title animate-up delay-1">ជាតិ សាសនា ព្រះមហាក្រត្ស</h1>
+          {/* <p className="page-hero-sub animate-up delay-2">សាលាបឋមសិក្សាប្រឡាយមាស</p> */}
+          <div className="grid-three-flags">
+            <img src="assets/logo/cambodia-flag-gif.gif" alt="" />
+            <img src="assets/logo/cambodia-flag-gif.gif" alt="" />
+            <img src="assets/logo/cambodia-flag-gif.gif" alt="" />
+          </div>
         </div>
       </div>
 
+
       <div className="container about-content">
         {/* Info grid */}
+        
         <div className="about-grid animate-up delay-1">
           <div className="about-info-card">
             <div className="about-info-header">
+              
               <span className="about-info-icon">🏫</span>
-              <h2>School Information</h2>
-              <p>ព័ត៌មានសាលា</p>
+              <h2>ព័ត៌មានសាលា</h2>
+              {/* <p>ព័ត៌មានសាលា</p> */}
             </div>
             <div className="about-info-rows">
               {[
                 ['School Name', 'Pralay Meas Primary School', 'ឈ្មោះ', 'សាលាបឋមសិក្សាប្រឡាយមាស'],
                 ['Level', 'Kindergarten to Grade 6', 'កម្រិត', 'មត្តេយ្យ ដល់ ថ្នាក់ទី ៦'],
-                ['Total Staff', '9 Members', 'បុគ្គលិក', '៩ នាក់'],
-                ['Location', 'Cambodia', 'ទីតាំង', 'កម្ពុជា'],
-                ['Language', 'Khmer / English', 'ភាសា', 'ខ្មែរ / អង់គ្លេស'],
+                ['Total Staff', '11 Members', 'បុគ្គលិក', '១១ នាក់'],
+                ['Location', 'Pralay Meas Kampong Laeang Kampong Chhnang', 'ទីតាំង', '📍ឃុំប្រឡាយមាស ស្រុកកំពង់លែង​​ ខេត្តកំពង់ឆ្នាំង'],
               ].map(([labelEn, valEn, labelKm, valKm], i) => (
                 <div key={i} className="about-info-row">
                   <div className="about-info-label">

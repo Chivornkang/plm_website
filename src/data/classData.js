@@ -39,7 +39,7 @@ export const classesData = [
     room: "Room 101", roomKh: "បន្ទប់ ១០១",
     teacher: {
       name: "Miss. Say Kory", nameKh: "អ្នកគ្រូ សាយ កយ",
-      title: "Class Teacher", titleKh: "គ្រូប្រចាំថ្នាក់",
+      title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "8 years", experienceKh: "៨ ឆ្នាំ",
       phone: "012 345 678", email: "sokha@pralaymeas.edu.kh", avatar: "👩‍🏫",
       bio: "Passionate early childhood educator with a warm, nurturing approach to learning.",
@@ -88,14 +88,15 @@ export const classesData = [
     id: 2,
     grade:"Grade 2", gradeKh:"ថ្នាក់ទី២",
     emoji:chivornAvatar, color:"#FFA500",
-    room:"Room 102", roomKh:"បន្ទប់ ១០២",
+    room:"Room 5A ", roomKh:"ថ្នាក់ ​២(ខ)​",
     teacher:{
       name:"Mr. CHIVORN KANG", nameKh:"លោកគ្រូ គាំង ជីវ័ន",
-      title:"Class Teacher", titleKh:"គ្រូប្រចាំថ្នាក់",
-      experience:"12 years", experienceKh:"១២ ឆ្នាំ",
-      phone:"011 234 567", email:"veasna@pralaymeas.edu.kh", avatar:chivornAvatar,
+      title:"Class Teacher", titleKh:"គ្រូបន្ទុកថ្នាក់",
+      experience:"8 years", experienceKh:"8 ឆ្នាំ",
+      phone:"0316363963", email:"chivorn.tc@gmail.edu.kh", avatar:chivornAvatar,
       bio:"Dedicated teacher who makes Math and Science exciting for young learners.",
       bioKh:"គ្រូដែលធ្វើឱ្យគណិតវិទ្យា និងវិទ្យាសាស្ត្រគួរឱ្យចាប់អារម្មណ៍សម្រាប់សិស្ស។",
+      metafb:"Kang G. Chivorn"
     },
     weeklySchedule:{
       Monday:    [{time:"7:00–8:00",subject:"Math",subjectKh:"គណិតវិទ្យា"},{time:"8:00–9:00",subject:"Khmer",subjectKh:"ភាសាខ្មែរ"},{time:"9:00–9:20",subject:"Break",subjectKh:"សម្រាក"},{time:"9:20–10:20",subject:"Science",subjectKh:"វិទ្យាសាស្ត្រ"},{time:"10:20–11:00",subject:"Art",subjectKh:"សិល្បៈ"}],
@@ -144,7 +145,7 @@ export const classesData = [
     room:"Room 201", roomKh:"បន្ទប់ ២០១",
     teacher:{
       name:"Mrs. Channary Lim", nameKh:"លោកគ្រូ ចន្ទារី លីម",
-      title:"Class Teacher", titleKh:"គ្រូប្រចាំថ្នាក់",
+      title:"Class Teacher", titleKh:"គ្រូបន្ទុកថ្នាក់",
       experience:"6 years", experienceKh:"៦ ឆ្នាំ",
       phone:"096 567 890", email:"channary@pralaymeas.edu.kh", avatar:"👩‍🏫",
       bio:"Creative and energetic, bringing Social Studies and Science to life.",
@@ -196,7 +197,7 @@ export const classesData = [
     room:"Room 202", roomKh:"បន្ទប់ ២០២",
     teacher:{
       name:"Mr. Dara Noun", nameKh:"លោកគ្រូ តារា នួន",
-      title:"Class Teacher", titleKh:"គ្រូប្រចាំថ្នាក់",
+      title:"Class Teacher", titleKh:"គ្រូបន្ទុកថ្នាក់",
       experience:"15 years", experienceKh:"១៥ ឆ្នាំ",
       phone:"077 890 123", email:"dara@pralaymeas.edu.kh", avatar:"👨‍🏫",
       bio:"Veteran educator specializing in English and Social Studies integration.",
@@ -248,7 +249,7 @@ export const classesData = [
     room:"Room 301", roomKh:"បន្ទប់ ៣០១",
     teacher:{
       name:"Mrs. Sreymom Keo", nameKh:"លោកគ្រូ ស្រីម៉ុម កែវ",
-      title:"Class Teacher", titleKh:"គ្រូប្រចាំថ្នាក់",
+      title:"Class Teacher", titleKh:"គ្រូបន្ទុកថ្នាក់",
       experience:"10 years", experienceKh:"១០ ឆ្នាំ",
       phone:"089 456 789", email:"sreymom@pralaymeas.edu.kh", avatar:"👩‍🏫",
       bio:"Enthusiastic teacher blending English, PE and creative exploration.",

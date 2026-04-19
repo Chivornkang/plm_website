@@ -37,31 +37,31 @@ export default function Classes() {
     <section className="classes-section">
 
       {/* Language toggle */}
-      <div className="topbar">
+      {/* <div className="topbar">
         <button className="lang-btn" onClick={() => setLang(lang === "en" ? "kh" : "en")}>
           {lang === "en" ? "🇰🇭 ខ្មែរ" : "🇬🇧 English"}
         </button>
-      </div>
+      </div> */}
 
       {/* ═══ LIST PAGE ═══ */}
       {!selected && (
         <>
           <header className="page-header">
             {/* <div className="page-badge">🏫 {t("Pralay Meas Primary School","សាលាបឋមសិក្សាប្រឡាយមាស")}</div> */}
-            <h1 className="page-title">{t("Classes & Grades","ថ្នាក់ និង ថ្នាក់ទី")}</h1>
-            <p className="page-sub">
+            <h1 className="page-title">{t("Checkout our Classes","ថ្នាក់រៀនរបស់យើង")}</h1>
+            {/* <p className="page-sub">
               {t(
                 "Click any class card to explore teacher profile, weekly schedule, cleaning groups & monthly results.",
                 "ចុចលើប័ណ្ណថ្នាក់ ដើម្បីមើលប្រវត្តិគ្រូ កាលវិភាគ ក្រុមសំអាត និងលទ្ធផលសិក្សា។"
               )}
-            </p>
-            <div className="stats-row">
+            </p> */}
+            {/* <div className="stats-row">
               <div className="stat"><span className="stat-n">6</span><span className="stat-l">{t("Grades","ថ្នាក់ទី")}</span></div>
               <div className="stat-div"/>
               <div className="stat"><span className="stat-n">332</span><span className="stat-l">{t("Students","សិស្ស")}</span></div>
               <div className="stat-div"/>
               <div className="stat"><span className="stat-n">11</span><span className="stat-l">{t("Teachers","គ្រូ")}</span></div>
-            </div>
+            </div> */}
           </header>
 
           <div className="cards-list">

@@ -90,11 +90,13 @@
   font-weight: 900;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.15;
-  margin: 0 0 .65rem;
+  margin: 5px;
+  padding: 10px;
   background: linear-gradient(135deg, #c46b09 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  /* margin: 15px 0 10px; */
 }
 
 .page-sub {

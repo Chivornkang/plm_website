@@ -36,7 +36,6 @@ export default function Footer({ navigate }) {
             <div className="footer-contact-item">📍ឃុំប្រឡាយមាស ស្រុកកំពង់លែង​​ ខេត្តកំពង់ឆ្នាំង</div>
             {/* <div onClick={() => window.location.href='mailto:pralaymeaspms@email.com'} className="footer-contact-item">📧 pralaymeaspms@email.com</div> */}
             <div className="footer-contact-item">📧 Pralaymeaspms@email.com</div>
-
           </div>
 
           {/* <div className="footer-contact">

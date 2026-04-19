@@ -57,6 +57,7 @@
 .about-info-header {
   background: rgba(201, 151, 42, 0.08);
   border-bottom: 1px solid var(--border);
+  border-radius: 20px 20px 0 0;
   padding: 1.2rem 1.5rem;
   display: flex;
   align-items: center;

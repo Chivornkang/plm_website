@@ -19,7 +19,7 @@ export default function About() {
          
           {/* <img src="assets/logo/cambodia-flag-gif.gif" alt="" /> */}
           <h1 className="page-hero-title animate-up delay-1">ព្រះរាជាណាចក្រកម្ពុជា</h1>
-          <h1 className="page-hero-title animate-up delay-1">ជាតិ សាសនា ព្រះមហាក្រត្ស</h1>
+          <h1 className="page-hero-title animate-up delay-1">ជាតិ សាសនា ព្រះមហាក្សត្រ</h1>
           {/* <p className="page-hero-sub animate-up delay-2">សាលាបឋមសិក្សាប្រឡាយមាស</p> */}
           <div className="grid-three-flags flags animate-up delay-3">
             <img class="animate-up delay-1" src="assets/logo/cambodia_flag.png" alt="" />

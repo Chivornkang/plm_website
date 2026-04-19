@@ -3,7 +3,13 @@
 // Schedule: Mon–Sat per grade (6 days).
 // Monthly results: Jan–Mar with full student list + top 3.
 
-import chivornAvatar from "../../assets/teachers/chivorn.png";
+import chivornAvatar from "../../assets/teachers/mee.jpg";
+import saykoryAvatar from "../../assets/teachers/teacher_k.jpg";
+import bongra from "../../assets/teachers/kru_ra.jpg";
+import bongsol from "../../assets/teachers/kru_sol.jpg";
+import kru_rorn from "../../assets/teachers/teacher_rorn.jpg";
+import kru_phorn from "../../assets/teachers/teacher_phorn.jpg";
+import principle from "../../assets/teachers/principle.jpg";
 
 
 export const DAYS_EN = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -34,16 +40,19 @@ export const classesData = [
   // ─────────────────────────────────────────── GRADE 1
   {
     id: 1,
-    grade: "Grade 1", gradeKh: "ថ្នាក់ទី១",
+    grade: "Grade 1", gradeKh: "ថ្នាក់ទី១ (ក)",
     emoji: "🌱", color: "#FF8C00",
     room: "Room 101", roomKh: "បន្ទប់ ១០១",
     teacher: {
       name: "Miss. Say Kory", nameKh: "អ្នកគ្រូ សាយ កយ",
       title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "8 years", experienceKh: "៨ ឆ្នាំ",
-      phone: "012 345 678", email: "sokha@pralaymeas.edu.kh", avatar: "👩‍🏫",
+      phone: "012 345 678", email: "sokha@pralaymeas.edu.kh", avatar:saykoryAvatar,
       bio: "Passionate early childhood educator with a warm, nurturing approach to learning.",
-      bioKh: "គ្រូដែលស្រឡាញ់ការអប់រំកុមារវ័យដំបូង ជាមួយវិធីសាស្ត្រសិក្សាដ៏ស្រស់ស្រាយ។",
+      bioKh: "សួស្តី ខ្ញុំឈ្មោះ សាយ កយ ជាគ្រូបន្ទុកថ្នាក់ទី១ ក្នុងឆ្នាំសិក្សា២០២៦-២០២៧ និងមានចំណូលចិត្តក្នុងការចិញ្ចឹមចិត្តកុមារតូចៗ ឱ្យស្រឡាញ់ការរៀនសូត្រ។",
+      metafb: "https://www.facebook.com/jiivorn.g1",
+      telegram: "https://t.me/chivorn",
+      youtube: "https://www.youtube.com/@jiivorn-ជីវ័ន",
     },
     weeklySchedule: {
       Monday:    [{time:"7:00–8:00",subject:"Khmer",subjectKh:"ភាសាខ្មែរ"},{time:"8:00–9:00",subject:"Math",subjectKh:"គណិតវិទ្យា"},{time:"9:00–9:20",subject:"Break",subjectKh:"សម្រាក"},{time:"9:20–10:20",subject:"Moral Education",subjectKh:"សីលធម៌"},{time:"10:20–11:00",subject:"Art",subjectKh:"សិល្បៈ"}],
@@ -86,8 +95,8 @@ export const classesData = [
   // ─────────────────────────────────────────── GRADE 2
   {
     id: 2,
-    grade:"Grade 2", gradeKh:"ថ្នាក់ទី២",
-    emoji:chivornAvatar, color:"#FFA500",
+    grade:"Grade 2", gradeKh:"ថ្នាក់ទី២​ (ក)",
+    emoji:chivornAvatar, color:"#1e1d1a",
     room:"Room 5A ", roomKh:"ថ្នាក់ ​២(ខ)​",
     teacher:{
       name:"Mr. CHIVORN KANG", nameKh:"លោកគ្រូ គាំង ជីវ័ន",
@@ -95,8 +104,10 @@ export const classesData = [
       experience:"8 years", experienceKh:"8 ឆ្នាំ",
       phone:"0316363963", email:"chivorn.tc@gmail.edu.kh", avatar:chivornAvatar,
       bio:"Dedicated teacher who makes Math and Science exciting for young learners.",
-      bioKh:"គ្រូដែលធ្វើឱ្យគណិតវិទ្យា និងវិទ្យាសាស្ត្រគួរឱ្យចាប់អារម្មណ៍សម្រាប់សិស្ស។",
-      metafb:"Kang G. Chivorn"
+      bioKh:"សួស្តី ខ្ញុំឈ្មោះ គាំង ជីវ័ន ជាគ្រូបន្ទុកថ្នាក់ទី២ ក្នុងឆ្នាំសិក្សា​២០២៦-២០២៧ និងទទួលបន្ទុកផ្នែកជំនួយការ ICT និង​ បរិស្ថានសាលា។",
+      metafb: "https://www.facebook.com/jiivorn.g1",
+      telegram: "https://t.me/chivorn",
+      youtube: "https://www.youtube.com/@jiivorn-ជីវ័ន",
     },
     weeklySchedule:{
       Monday:    [{time:"7:00–8:00",subject:"Math",subjectKh:"គណិតវិទ្យា"},{time:"8:00–9:00",subject:"Khmer",subjectKh:"ភាសាខ្មែរ"},{time:"9:00–9:20",subject:"Break",subjectKh:"សម្រាក"},{time:"9:20–10:20",subject:"Science",subjectKh:"វិទ្យាសាស្ត្រ"},{time:"10:20–11:00",subject:"Art",subjectKh:"សិល្បៈ"}],
@@ -107,6 +118,9 @@ export const classesData = [
       Saturday:  [{time:"7:00–8:30",subject:"Math Review",subjectKh:"ត្រួតពិនិត្យគណិត"},{time:"8:30–9:00",subject:"Break",subjectKh:"សម្រាក"},{time:"9:00–10:00",subject:"Khmer Review",subjectKh:"ត្រួតពិនិត្យខ្មែរ"}],
     },
     cleaningGroups:[
+      ["Pisey","Ratanak","Sophal","Dyna","Menghour","Sreynich","Chanmoly"],
+      ["Raksmey","Vira","Sokunthea","Lyda","Ponleak","Thida","Narith"],
+      ["Samnang","Chankrisna","Boranin","Visal","Mengly","Sotheavy","Chamroeun"],
       ["Pisey","Ratanak","Sophal","Dyna","Menghour","Sreynich","Chanmoly"],
       ["Raksmey","Vira","Sokunthea","Lyda","Ponleak","Thida","Narith"],
       ["Samnang","Chankrisna","Boranin","Visal","Mengly","Sotheavy","Chamroeun"],
@@ -144,12 +158,15 @@ export const classesData = [
     emoji:"🌻", color:"#FFB700",
     room:"Room 201", roomKh:"បន្ទប់ ២០១",
     teacher:{
-      name:"Mrs. Channary Lim", nameKh:"លោកគ្រូ ចន្ទារី លីម",
+      name:"Mr. Sok Saran", nameKh:"លោកគ្រូ សុខ សារ៉ន",
       title:"Class Teacher", titleKh:"គ្រូបន្ទុកថ្នាក់",
       experience:"6 years", experienceKh:"៦ ឆ្នាំ",
-      phone:"096 567 890", email:"channary@pralaymeas.edu.kh", avatar:"👩‍🏫",
+      phone:"096 567 890", email:"channary@pralaymeas.edu.kh", avatar:kru_rorn,
       bio:"Creative and energetic, bringing Social Studies and Science to life.",
-      bioKh:"ច្នៃប្រឌិត និងមានទឹកចិត្ត ធ្វើឱ្យសិក្សាសង្គម និងវិទ្យាសាស្ត្រមានជីវិតជីវា។",
+      bioKh:"សួស្តី ខ្ញុំឈ្មោះ សុខ សារ៉ន ជាគ្រូបន្ទុកថ្នាក់ទី៣ ក្នុងឆ្នាំសិក្សា២០២៦-២០២៧ ចូលចិត្តធ្វើឱ្យមុខវិជ្ជាសិក្សាសង្គម និងវិទ្យាសាស្ត្រ មានភាពរស់រវើក និងគួរឱ្យចាប់អារម្មណ៍។",
+      metafb: "https://www.facebook.com/jiivorn.g1",
+      telegram: "https://t.me/chivorn",
+      youtube: "https://www.youtube.com/@jiivorn-ជីវ័ន",
     },
     weeklySchedule:{
       Monday:    [{time:"7:00–8:00",subject:"Khmer",subjectKh:"ភាសាខ្មែរ"},{time:"8:00–9:00",subject:"Math",subjectKh:"គណិតវិទ្យា"},{time:"9:00–9:20",subject:"Break",subjectKh:"សម្រាក"},{time:"9:20–10:10",subject:"Science",subjectKh:"វិទ្យាសាស្ត្រ"},{time:"10:10–11:00",subject:"Social Studies",subjectKh:"សិក្សាសង្គម"},{time:"11:00–11:30",subject:"Art",subjectKh:"សិល្បៈ"}],
@@ -196,12 +213,15 @@ export const classesData = [
     emoji:"🌸", color:"#E8900A",
     room:"Room 202", roomKh:"បន្ទប់ ២០២",
     teacher:{
-      name:"Mr. Dara Noun", nameKh:"លោកគ្រូ តារា នួន",
+      name:"Mr. Ses Sopheara", nameKh:"លោកគ្រូ សេះ សុភារ៉ា",
       title:"Class Teacher", titleKh:"គ្រូបន្ទុកថ្នាក់",
       experience:"15 years", experienceKh:"១៥ ឆ្នាំ",
-      phone:"077 890 123", email:"dara@pralaymeas.edu.kh", avatar:"👨‍🏫",
+      phone:"077 890 123", email:"dara@pralaymeas.edu.kh", avatar:bongra,
       bio:"Veteran educator specializing in English and Social Studies integration.",
-      bioKh:"គ្រូបទពិសោធច្រើនឆ្នាំ ជំនាញខាងអង់គ្លេស និងការបង្រួបបង្រួមជាមួយសិក្សាសង្គម។",
+      bioKh:"សួស្តី ខ្ញុំឈ្មោះ សេះ សុភារ៉ា ជាគ្រូបន្ទុកថ្នាក់ទី៤ ក្នុងឆ្នាំសិក្សា២០២៦-២០២៧ ជំនាញខាងអក្សរសាស្រ្តខ្មែរ មានតួនាទទួលបន្ទុកផ្នែកគ្រប់គ្រងវិន័យសាលា និងជំនួយការ ICT។",
+      metafb: "https://www.facebook.com/jiivorn.g1",
+      telegram: "https://t.me/chivorn",
+      youtube: "https://www.youtube.com/@jiivorn-ជីវ័ន",
     },
     weeklySchedule:{
       Monday:    [{time:"7:00–8:00",subject:"Khmer",subjectKh:"ភាសាខ្មែរ"},{time:"8:00–8:50",subject:"Math",subjectKh:"គណិតវិទ្យា"},{time:"8:50–9:40",subject:"English",subjectKh:"អង់គ្លេស"},{time:"9:40–10:00",subject:"Break",subjectKh:"សម្រាក"},{time:"10:00–10:50",subject:"Science",subjectKh:"វិទ្យាសាស្ត្រ"},{time:"10:50–11:30",subject:"Social Studies",subjectKh:"សិក្សាសង្គម"}],
@@ -248,12 +268,15 @@ export const classesData = [
     emoji:"⭐", color:"#D4780A",
     room:"Room 301", roomKh:"បន្ទប់ ៣០១",
     teacher:{
-      name:"Mrs. Sreymom Keo", nameKh:"លោកគ្រូ ស្រីម៉ុម កែវ",
+      name:"Mr.Sok Saran", nameKh:"លោកគ្រូ សុខ​ សារ៉ន",
       title:"Class Teacher", titleKh:"គ្រូបន្ទុកថ្នាក់",
-      experience:"10 years", experienceKh:"១០ ឆ្នាំ",
-      phone:"089 456 789", email:"sreymom@pralaymeas.edu.kh", avatar:"👩‍🏫",
+      experience:"30 years", experienceKh:"៣០ ឆ្នាំ",
+      phone:"089 456 789", email:"sreymom@pralaymeas.edu.kh", avatar:kru_rorn,
       bio:"Enthusiastic teacher blending English, PE and creative exploration.",
-      bioKh:"គ្រូដែលភ្ជាប់អង់គ្លេស កីឡា និងការស្វែងរកបទពិសោធសិក្សា។",
+      bioKh:"សួស្តី ខ្ញុំឈ្មោះ ស្រីម៉ុម កែវ ជាគ្រូបន្ទុកថ្នាក់ទី៥ ក្នុងឆ្នាំសិក្សា២០២៦-២០២៧ ចូលចិត្តបង្រៀនភាសាអង់គ្លេស កីឡា និងលើកទឹកចិត្តការស្វែងរកគំនិតថ្មី។",
+      metafb: "https://www.facebook.com/jiivorn.g1",
+      telegram: "https://t.me/chivorn",
+      youtube: "https://www.youtube.com/@jiivorn-ជីវ័ន",
     },
     weeklySchedule:{
       Monday:    [{time:"7:00–8:00",subject:"Khmer",subjectKh:"ភាសាខ្មែរ"},{time:"8:00–8:50",subject:"Math",subjectKh:"គណិតវិទ្យា"},{time:"8:50–9:40",subject:"English",subjectKh:"អង់គ្លេស"},{time:"9:40–10:00",subject:"Break",subjectKh:"សម្រាក"},{time:"10:00–10:50",subject:"Science",subjectKh:"វិទ្យាសាស្ត្រ"},{time:"10:50–11:30",subject:"PE",subjectKh:"កីឡា"}],
@@ -300,12 +323,15 @@ export const classesData = [
     emoji:"🏆", color:"#C46B09",
     room:"Room 302", roomKh:"បន្ទប់ ៣០២",
     teacher:{
-      name:"Mr. Piseth Heng", nameKh:"លោកគ្រូ ពិសិទ្ធ ហេង",
+      name:"Mr. Sam Kosal", nameKh:"លោកគ្រូ សំ កុសល",
       title:"Senior Teacher", titleKh:"គ្រូជាន់ខ្ពស់",
       experience:"18 years", experienceKh:"១៨ ឆ្នាំ",
-      phone:"085 123 456", email:"piseth@pralaymeas.edu.kh", avatar:"👨‍🏫",
+      phone:"085 123 456", email:"piseth@pralaymeas.edu.kh", avatar:bongsol,
       bio:"Senior teacher, expert in Computer literacy and national exam preparation.",
-      bioKh:"គ្រូជាន់ខ្ពស់ ជំនាញខាងកុំព្យូទ័រ និងការត្រៀមប្រឡង។",
+      bioKh:"សួស្តី ខ្ញុំឈ្មោះ ពិសិទ្ធ ហេង ជាគ្រូបន្ទុកថ្នាក់ទី៦ ក្នុងឆ្នាំសិក្សា២០២៦-២០២៧ ជំនាញខាងគណិតវិទ្យា និង​គ្រប់គ្រងឃ្លាំង សម្ភារៈសាលា។",
+      metafb: "https://www.facebook.com/jiivorn.g1",
+      telegram: "https://t.me/chivorn",
+      youtube: "https://www.youtube.com/@jiivorn-ជីវ័ន",
     },
     weeklySchedule:{
       Monday:    [{time:"7:00–7:50",subject:"Khmer",subjectKh:"ភាសាខ្មែរ"},{time:"7:50–8:40",subject:"Math",subjectKh:"គណិតវិទ្យា"},{time:"8:40–9:30",subject:"English",subjectKh:"អង់គ្លេស"},{time:"9:30–9:50",subject:"Break",subjectKh:"សម្រាក"},{time:"9:50–10:40",subject:"Science",subjectKh:"វិទ្យាសាស្ត្រ"},{time:"10:40–11:30",subject:"Computer",subjectKh:"កុំព្យូទ័រ"}],

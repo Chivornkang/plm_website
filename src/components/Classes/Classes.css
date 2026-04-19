@@ -264,6 +264,7 @@
 }
 
 @media (max-width: 580px) {
+  .cc-grade{ font-size: .98rem; }
   .stats-row {
     flex-direction: column;
     border-radius: 16px;

@@ -2,13 +2,13 @@ import { useState } from 'react'
 import './Contact.css'
 
 const contactInfo = [
-  { 
-    icon: '📍', 
-    labelEn: 'Address', 
-    labelKm: 'អាសយដ្ឋាន', 
-    valEn: 'Pralay Meas Commune, Kampong Laeng District', 
-    valKm: 'ឃុំប្រឡាយមាស ស្រុកកំពង់លែង ខេត្តកំពង់ឆ្នាំង' 
-  },
+  // { 
+  //   icon: '📍', 
+  //   labelEn: 'Address', 
+  //   labelKm: 'អាសយដ្ឋាន', 
+  //   valEn: 'Pralay Meas Commune, Kampong Laeng District', 
+  //   valKm: 'ឃុំប្រឡាយមាស ស្រុកកំពង់លែង ខេត្តកំពង់ឆ្នាំង' 
+  // },
   { 
     icon: '📞', 
     labelEn: 'Phone', 
@@ -48,15 +48,7 @@ const hours = [
 ]
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = e => setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
-
-  const handleSubmit = () => {
-    if (!formData.name || !formData.message) return
-    setSubmitted(true)
-  }
 
   return (
     <div className="contact-page">
@@ -74,10 +66,10 @@ export default function Contact() {
 
           {/* Left Column - Info & Hours */}
           <div className="contact-left">
-            <div className="section-header animate-up">
+            {/* <div className="section-header animate-up">
               <p className="badge">Contact Details</p>
               <h2 className="section-title">Find Us</h2>
-            </div>
+            </div> */}
 
             <div className="contact-info-list animate-up delay-1">
               {contactInfo.map((c, i) => (
@@ -111,11 +103,17 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Right Column - Map + Form */}
-          <div className="contact-right">
+          <div className="contact-info-list animate-up delay-1">
+                <div  className="contact-info-item">
+                  <div className="ci-icon">📍</div>
+                  <div className="ci-body">
+                    <div className="ci-label">អាសយដ្ឋាន <span className="km">/Address </span></div>
+                    <div className="ci-val">ឃុំប្រឡាយមាស ស្រុកកំពង់លែង ខេត្តកំពង់ឆ្នាំង</div>
+                    <div className="ci-val-km">Pralay Meas Commune, Kampong Laeng District, Kampong Chhnang Province</div>
+                  </div>
+                </div>
+                <div className="contact-right">
             <div className="map-section animate-up delay-1">
-              <h3 className="map-title">📍 Our Location <span className="km">/ ទីតាំង</span></h3>
               <div className="map-embed">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d524.2159254143647!2d104.62558871136227!3d12.38971513544448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310ef53aa4566149%3A0x57f79f0f7105c97d!2z4Z6f4Z624Z6b4Z624Z6U4Z6L4Z6Y4Z6f4Z634Z6A4Z-S4Z6f4Z624Z6U4Z-S4Z6a4Z6h4Z624Z6Z4Z6Y4Z624Z6f!5e1!3m2!1sen!2skh!4v1776560867240!5m2!1sen!2skh" 
@@ -129,6 +127,25 @@ export default function Contact() {
                 />
               </div>
             </div>
+
+            </div>
+
+          {/* <div className="contact-right">
+            <div className="map-section animate-up delay-1">
+              <h3 className="map-title">📍 អាសយដ្ឋាន <span className="km">/ Address</span></h3>
+              <div className="map-embed">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d524.2159254143647!2d104.62558871136227!3d12.38971513544448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310ef53aa4566149%3A0x57f79f0f7105c97d!2z4Z6f4Z624Z6b4Z624Z6U4Z6L4Z6Y4Z6f4Z634Z6A4Z-S4Z6f4Z624Z6U4Z-S4Z6a4Z6h4Z624Z6Z4Z6Y4Z624Z6f!5e1!3m2!1sen!2skh!4v1776560867240!5m2!1sen!2skh" 
+                  width="100%" 
+                  height="420" 
+                  style={{border:0}} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Pralay Meas Primary School Location"
+                />
+              </div>
+            </div> */}
 
         
           </div>

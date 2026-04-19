@@ -24,7 +24,7 @@ export default function Footer({ navigate }) {
               ['home', 'Home / ទំព័រដើម'],
               ['about', 'About / អំពីសាលា'],
               ['management', 'Team / ក្រុមការងារ'],
-              ['news', 'News / ព័ត៌មាន'],
+              // ['news', 'News / ព័ត៌មាន'],
               ['contact', 'Contact / ទំនាក់ទំនង'],
             ].map(([id, label]) => (
               <button key={id} className="footer-link" onClick={() => navigate(id)}>{label}</button>

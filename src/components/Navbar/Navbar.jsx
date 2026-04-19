@@ -4,9 +4,9 @@ import './Navbar.css'
 const navItems = [
   { id: 'home', en: 'Home', km: 'ទំព័រដើម' },
   { id: 'classes', en: 'Classes', km: 'ថ្នាក់រៀន' },
-  { id: 'about', en: 'About', km: 'អំពីសាលា' },
   { id: 'management', en: 'Team', km: 'ក្រុមការងារ' },
-  { id: 'news', en: 'News', km: 'ព័ត៌មាន' },
+  // { id: 'news', en: 'News', km: 'ព័ត៌មាន' },
+ { id: 'about', en: 'About', km: 'អំពីសាលា' },
   { id: 'contact', en: 'Contact', km: 'ទំនាក់ទំនង' },
 ]
 

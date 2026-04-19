@@ -40,13 +40,13 @@ export default function ClassDetail({ cls, lang, onBack }) {
           <span>📋</span>
           <span>{t("Class Information", "ព័ត៌មានថ្នាក់")}</span>
         </button>
-        <button
+        {/* <button
           className={`cd-tab ${tab === "results" ? "cd-tab-active" : ""}`}
           onClick={() => setTab("results")}
         >
           <span>📊</span>
           <span>{t("Study Results", "លទ្ធផលសិក្សា")}</span>
-        </button>
+        </button> */}
       </div>
 
       {/* ══ TAB: CLASS INFORMATION ══ */}
@@ -55,8 +55,9 @@ export default function ClassDetail({ cls, lang, onBack }) {
 
           <section className="cd-section">
             <h3 className="cd-section-title">
-              👩‍🏫 {t("Teacher Profile", "ប្រវត្តិគ្រូ")}
+              {t("Teacher Profile", "ប្រវត្តិគ្រូ")}
             </h3>
+            {/* hav teacher mk nis mk b  🙏😒😵‍💫 */}
             <TeacherCard teacher={cls.teacher} color={cls.color} lang={lang} />
           </section>
 

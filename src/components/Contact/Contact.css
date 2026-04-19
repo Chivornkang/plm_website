@@ -1,6 +1,7 @@
 .contact-content { padding: 3rem 0 4rem; }
 
 .contact-grid {
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -100,7 +101,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  height: 220px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;

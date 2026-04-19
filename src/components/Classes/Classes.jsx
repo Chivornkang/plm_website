@@ -15,7 +15,7 @@ function ClassCard({ cls, lang, onClick }) {
         <h2 className="cc-grade">{t(cls.teacher.name, cls.teacher.nameKh)}</h2>
         {/* <p className="cc-teacher">{t(cls.teacher.name, cls.teacher.nameKh)}</p> */}
         <div className="cc-chips">
-          <span className="cc-chip">{t(cls.room, cls.roomKh)}</span>
+          {/* <span className="cc-chip">{t(cls.room, cls.roomKh)}</span> */}
           <span className="cc-chip">👦 {cls.monthlyResults[0]?.students?.length ?? "—"} {t("students","សិស្ស")}</span>
         </div>
       </div>
@@ -26,7 +26,7 @@ function ClassCard({ cls, lang, onClick }) {
 }
 
 export default function Classes() {
-  const [lang, setLang]     = useState("en");
+  const [lang, setLang]     = useState("kh");
   const [selected, setSelected] = useState(null);
   const t = (en, kh) => lang === "en" ? en : kh;
 

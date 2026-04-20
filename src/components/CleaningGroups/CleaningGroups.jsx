@@ -1,5 +1,4 @@
 // components/CleaningGroups.jsx
-// import { DAYS_EN, DAYS_KH } from "../classData";
 import { DAYS_EN, DAYS_KH } from "../../data/classData";
 import "./CleaningGroups.css";
 
@@ -32,7 +31,7 @@ export default function CleaningGroups({ cleaningGroups, color, lang }) {
             <div className="cg-members">
               {group.map((name, ni) => (
                 <div key={ni} className="cg-member" style={{ animationDelay: `${gi * 0.065 + ni * 0.03}s` }}>
-                  <span className="cg-member-avatar">{["🧑","👦","👧","🧒"][ni % 4]}</span>
+                  <span className="cg-member-num">{ni + 1}</span>
                   <span className="cg-member-name">{name}</span>
                 </div>
               ))}

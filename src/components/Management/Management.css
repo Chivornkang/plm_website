@@ -1,201 +1,319 @@
-.mgmt-content { padding: 3rem 0 4rem; }
+/* ═══════════════════════════════════════════════════════════════
+   Management.css  —  Org-chart + TeacherCard modal layout
+   ═══════════════════════════════════════════════════════════════ */
 
-/* Org Chart */
+.mgmt-content { padding: 3rem 0 5rem; }
+
+/* ── Section header (reuses global styles) ──────────────────── */
+.gold-line {
+  width: 60px; height: 3px;
+  background: var(--gold, #c9971e);
+  border-radius: 2px;
+  margin: 0.75rem auto 0;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ORG CHART
+   ════════════════════════════════════════════════════════════════ */
 .org-chart {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
-.org-school-box {
+/* ── Row 1: Principal ─ Ex-Principal ──────────────────────── */
+.org-row--top {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  background: rgba(201,151,42,0.12);
-  border: 1px solid var(--gold);
-  border-radius: var(--radius-md);
-  padding: 1rem 2rem;
-  margin-bottom: 0;
+  justify-content: center;
+  gap: 0;
 }
-.org-school-icon { font-size: 2rem; }
-.org-school-name {
+
+/* horizontal line between the two top nodes */
+.org-h-line {
+  width: clamp(40px, 6vw, 80px);
+  height: 2px;
+  background: linear-gradient(90deg, rgba(201,151,42,0.6), rgba(201,151,42,0.6));
+  flex-shrink: 0;
+}
+
+/* ── Vertical stub connectors ─────────────────────────────── */
+.org-v-stub {
+  width: 2px;
+  height: 28px;
+  background: linear-gradient(to bottom, rgba(201,151,42,0.8), rgba(201,151,42,0.3));
+  flex-shrink: 0;
+}
+
+/* ── School centre node ───────────────────────────────────── */
+.org-school-node {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(201,151,42,0.10);
+  border: 1.5px solid rgba(201,151,42,0.5);
+  border-radius: 14px;
+  padding: 0.85rem 1.8rem;
+  box-shadow: 0 2px 16px rgba(201,151,42,0.12);
+}
+.org-school-node-icon { font-size: 1.8rem; }
+.org-school-node-name {
   font-family: 'Playfair Display', serif;
-  color: var(--gold-light);
-  font-size: 1rem;
-  font-weight: 600;
+  color: var(--gold-light, #e8c070);
+  font-size: 0.92rem;
+  font-weight: 700;
 }
-.org-school-km {
+.org-school-node-km {
   font-family: 'Noto Serif Khmer', serif;
-  color: var(--text-muted);
-  font-size: 0.75rem;
+  color: var(--text-muted, #aaa);
+  font-size: 0.7rem;
   margin-top: 2px;
 }
 
-.org-connector-v {
-  width: 2px;
-  height: 30px;
-  background: linear-gradient(to bottom, var(--gold), rgba(201,151,42,0.3));
-}
-.org-connector-h {
+/* ── Wide horizontal bar above teacher columns ────────────── */
+.org-h-bar {
   height: 2px;
-  width: min(600px, 90%);
-  background: linear-gradient(90deg, transparent, rgba(201,151,42,0.4), transparent);
-  margin-bottom: 0;
+  width: min(760px, 90%);
+  background: linear-gradient(90deg, transparent, rgba(201,151,42,0.45), transparent);
 }
 
-.org-leadership-row {
+/* ── Teacher block (top-4 / bottom-3 rows) ────────────────── */
+.org-teachers-block {
+  width: 100%;
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
 }
 
-.org-card {
-  background: var(--navy-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 1.4rem 1.2rem;
-  text-align: center;
-  width: 160px;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-}
-.org-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-.org-card--principal {
-  border-color: var(--gold);
-  background: rgba(201,151,42,0.07);
-}
-.org-card--principal:hover { border-color: var(--gold-light); }
-.org-card--ex { border-color: rgba(201,151,42,0.4); }
-.org-card--ex:hover { border-color: var(--gold); }
-
-.org-avatar {
-  width: 54px; height: 54px;
-  border-radius: 50%;
-  background: rgba(201,151,42,0.15);
-  border: 1px solid rgba(201,151,42,0.4);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem;
-  margin: 0 auto 0.7rem;
-}
-.org-card--principal .org-avatar {
-  background: var(--gold);
-  font-size: 1.8rem;
-  box-shadow: 0 0 20px rgba(201,151,42,0.4);
-}
-
-.org-role-badge {
-  display: inline-block;
-  background: rgba(201,151,42,0.18);
-  color: var(--gold-light);
-  font-size: 0.65rem;
-  padding: 2px 8px;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.05em;
-  font-weight: 500;
-}
-.org-name { font-size: 0.8rem; color: var(--white); font-weight: 500; margin-bottom: 2px; }
-.org-name-km { font-family: 'Noto Serif Khmer', serif; font-size: 0.7rem; color: var(--text-dim); margin-bottom: 2px; }
-.org-role-km { font-family: 'Noto Serif Khmer', serif; font-size: 0.68rem; color: var(--gold); }
-
-/* Mini org teacher boxes */
 .org-teachers-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: nowrap;
   gap: 0.6rem;
+  width: 100%;
+  max-width: 820px;
+}
+
+.org-teachers-row--bottom {
   margin-top: 0;
-  max-width: 700px;
-  padding-top: 0.5rem;
 }
-.org-teacher-mini {
+
+.org-teacher-col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  background: var(--navy-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 0.6rem 0.8rem;
-  width: 88px;
-  transition: border-color var(--transition), transform var(--transition);
+  flex: 1;
+  min-width: 0;
+  max-width: 120px;
 }
-.org-teacher-mini:hover {
-  border-color: rgba(201,151,42,0.5);
-  transform: translateY(-3px);
-}
-.org-teacher-emoji { font-size: 1.3rem; }
-.org-teacher-grade { font-size: 0.65rem; color: var(--gold-light); font-weight: 500; text-align: center; line-height: 1.2; }
-.org-teacher-grade-km { font-family: 'Noto Serif Khmer', serif; font-size: 0.6rem; color: var(--text-dim); text-align: center; }
 
-/* Teacher cards */
-.teachers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+.org-drop-line {
+  width: 2px;
+  height: 22px;
+  background: linear-gradient(to bottom, rgba(201,151,42,0.5), rgba(201,151,42,0.2));
+  flex-shrink: 0;
+}
+.org-drop-line--short { height: 14px; }
+
+/* ════════════════════════════════════════════════════════════════
+   ORG NODE  (clickable card for every person)
+   ════════════════════════════════════════════════════════════════ */
+.org-node {
+  --nc: #c9971e;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  margin-bottom: 3rem;
-}
-.teacher-card {
-  padding: 1.4rem 1rem 1rem;
+  background: var(--navy-card, #0e1a2b);
+  border: 1.5px solid rgba(201,151,42,0.25);
+  border-radius: 14px;
+  padding: 0.9rem 0.7rem 0.65rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   text-align: center;
-  cursor: default;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 120px;
+  height: 130px;
+  overflow: hidden;
 }
-.teacher-avatar-wrap {
-  position: relative;
-  width: 64px; height: 64px;
-  margin: 0 auto 0.9rem;
-}
-.teacher-avatar {
-  width: 60px; height: 60px;
-  border-radius: 50%;
-  background: rgba(201,151,42,0.12);
-  border: 1px solid rgba(201,151,42,0.3);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem;
-  position: relative;
-  z-index: 1;
-  transition: box-shadow var(--transition);
-}
-.teacher-card:hover .teacher-avatar {
-  box-shadow: 0 0 0 4px rgba(201,151,42,0.25);
-}
-.teacher-avatar-ring {
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 1px solid rgba(201,151,42,0.2);
-  transition: border-color var(--transition);
-}
-.teacher-card:hover .teacher-avatar-ring {
-  border-color: rgba(201,151,42,0.5);
-}
-.teacher-grade-badge {
-  font-size: 0.68rem;
-  color: var(--gold);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 0.3rem;
-}
-.teacher-name { font-size: 0.85rem; color: var(--white); font-weight: 500; margin-bottom: 2px; }
-.teacher-name-km { font-family: 'Noto Serif Khmer', serif; font-size: 0.7rem; color: var(--text-dim); margin-bottom: 0.6rem; }
-.teacher-divider { width: 30px; height: 1px; background: var(--border); margin: 0.5rem auto; }
-.teacher-meta { display: flex; justify-content: center; }
 
-@media (max-width: 600px) {
-  .org-leadership-row { gap: 1rem; }
-  .org-card { width: 140px; }
-  .teachers-grid { grid-template-columns: repeat(2, 1fr); }
-  .org-school-box { flex-direction: column; text-align: center; padding: 1rem; }
-  .org-school-icon { font-size: 1.5rem; }
+.org-node::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--nc) 12%, transparent), transparent 70%);
+  pointer-events: none;
 }
-@media (max-width: 380px) {
-  .teachers-grid { grid-template-columns: 1fr; }
+
+.org-node:hover {
+  transform: translateY(-5px);
+  border-color: var(--nc);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--nc) 30%, transparent);
+}
+
+.org-node:hover .org-node-hint { opacity: 1; transform: translateY(0); }
+
+/* Photo circle */
+.org-node-photo {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(201,151,42,0.10);
+  border: 2px solid color-mix(in srgb, var(--nc) 40%, transparent);
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.org-node:hover .org-node-photo {
+  border-color: var(--nc);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--nc) 20%, transparent);
+}
+.org-node-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.org-node-emoji { font-size: 1.5rem; line-height: 1; }
+
+/* Text */
+.org-node-role {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--nc);
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.2;
+}
+.org-node-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.72rem;
+  color: var(--white, #fff);
+  font-weight: 600;
+  line-height: 1.25;
+}
+.org-node-name-km {
+  font-family: 'Noto Serif Khmer', serif;
+  font-size: 0.62rem;
+  color: var(--text-dim, #888);
+  line-height: 1.2;
+}
+
+/* Hover hint */
+.org-node-hint {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--nc);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Variant overrides */
+.org-node--principal {
+  border-color: rgba(201,151,42,0.6);
+  background: rgba(201,151,42,0.06);
+  min-width: 130px;
+  max-width: 150px;
+}
+.org-node--principal .org-node-photo {
+  width: 64px; height: 64px;
+  border-color: rgba(201,151,42,0.7);
+}
+
+.org-node--ex {
+  min-width: 120px;
+  max-width: 140px;
+}
+.org-node--ex .org-node-photo {
+  width: 58px; height: 58px;
+}
+
+.org-node--teacher {
+  padding: 0.75rem 0.5rem 0.55rem;
+}
+.org-node--teacher .org-node-photo {
+  width: 44px; height: 44px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   MODAL  (TeacherCard popup)
+   ════════════════════════════════════════════════════════════════ */
+.mgmt-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: overlayIn 0.22s ease;
+  overflow: hidden; /* prevent the overlay itself from scrolling */
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.mgmt-modal-inner {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  animation: modalIn 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201,151,42,0.3) transparent;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.88) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.mgmt-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.mgmt-modal-close:hover {
+  background: rgba(0,0,0,0.65);
+  transform: scale(1.1);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 680px) {
+  .org-row--top { flex-direction: column; gap: 0.5rem; }
+  .org-h-line   { display: none; }
+
+  .org-teachers-row  { flex-wrap: wrap; gap: 0.5rem; }
+  .org-teacher-col   { max-width: calc(50% - 0.25rem); flex: 0 0 calc(50% - 0.25rem); }
+  .org-h-bar         { display: none; }
+}
+
+@media (max-width: 420px) {
+  .org-school-node { flex-direction: column; text-align: center; padding: 0.75rem 1rem; }
+  .org-node--principal, .org-node--ex { min-width: 100px; }
 }

@@ -1,31 +1,30 @@
 // components/CleaningGroups.jsx
-import { DAYS_EN, DAYS_KH } from "../../data/classData";
-import "./CleaningGroups.css";
+import { useApp } from "../../AppContext"
+import { DAYS_EN, DAYS_KH } from "../../data/classData"
+import "./CleaningGroups.css"
 
-export default function CleaningGroups({ cleaningGroups, color, lang }) {
-  const t = (en, kh) => lang === "en" ? en : kh;
+export default function CleaningGroups({ cleaningGroups, color }) {
+  const { lang } = useApp()
+  const kh = lang === 'km'
 
   return (
     <div className="cg-wrap" style={{ "--cc": color }}>
       <div className="cg-note">
-        🧹 {t(
-          "Each group is responsible for cleaning the classroom on their assigned day.",
-          "ក្រុមនីមួយៗទទួលខុសត្រូវក្នុងការសំអាតថ្នាក់រៀននៅថ្ងៃដែលត្រូវបានកំណត់។"
-        )}
+        🧹 {kh
+          ? "ក្រុមនីមួយៗទទួលខុសត្រូវក្នុងការសំអាតថ្នាក់រៀននៅថ្ងៃដែលត្រូវបានកំណត់។"
+          : "Each group is responsible for cleaning the classroom on their assigned day."}
       </div>
 
       <div className="cg-grid">
         {cleaningGroups.map((group, gi) => (
           <div key={gi} className="cg-card" style={{ animationDelay: `${gi * 0.065}s` }}>
             <div className="cg-day-header">
-              <span className="cg-day-icon">
-                {["🌤","⛅","🌥","🌦","☀️","🌈"][gi]}
-              </span>
+              <span className="cg-day-icon">{["🌤","⛅","🌥","🌦","☀️","🌈"][gi]}</span>
               <div>
                 <div className="cg-day-name">
-                  {t(DAYS_EN[gi] ?? `Day ${gi+1}`, DAYS_KH[gi] ?? `ថ្ងៃ ${gi+1}`)}
+                  {kh ? (DAYS_KH[gi] ?? `ថ្ងៃ ${gi + 1}`) : (DAYS_EN[gi] ?? `Day ${gi + 1}`)}
                 </div>
-                <div className="cg-member-count">{group.length} {t("students","នាក់")}</div>
+                <div className="cg-member-count">{group.length} {kh ? "នាក់" : "students"}</div>
               </div>
             </div>
             <div className="cg-members">
@@ -40,5 +39,5 @@ export default function CleaningGroups({ cleaningGroups, color, lang }) {
         ))}
       </div>
     </div>
-  );
+  )
 }

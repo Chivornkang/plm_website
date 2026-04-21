@@ -8,6 +8,7 @@ import Management from './components/Management/Management'
 import News       from './components/News/News'
 import Contact    from './components/Contact/Contact'
 import Loader     from './components/Loader/Loader'
+import { AppProvider } from './AppContext'
 import './App.css'
 
 const pages = { home: Home, classes: Classes, about: About, management: Management, news: News, contact: Contact }
@@ -57,7 +58,7 @@ export default function App() {
   const PageComponent = pages[page]
 
   return (
-    <>
+    <AppProvider>
       {loading && <Loader />}
       <div className={`app-wrapper ${pageTransition ? 'page-exit' : 'page-enter'}`}>
         <Navbar currentPage={page} navigate={navigate} />
@@ -66,6 +67,6 @@ export default function App() {
         </main>
         <Footer navigate={navigate} />
       </div>
-    </>
+    </AppProvider>
   )
 }

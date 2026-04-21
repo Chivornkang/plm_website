@@ -1,6 +1,19 @@
 import './Footer.css'
+import { useApp } from '../../AppContext'
+import { t } from '../../data/lang_data'
 
 export default function Footer({ navigate }) {
+  const { lang } = useApp()
+  const tx = t(lang)
+  const ft = tx.footer
+
+  const navLinks = [
+    { id: 'home',       label: ft.navHome },
+    { id: 'about',      label: ft.navAbout },
+    { id: 'management', label: ft.navManagement },
+    { id: 'contact',    label: ft.navContact },
+  ]
+
   return (
     <footer className="footer">
       <div className="footer-top">
@@ -9,87 +22,47 @@ export default function Footer({ navigate }) {
             <div className="footer-emblem">
               <img src="assets/logo/logo_sala.png" alt="School logo" />
             </div>
-            <div >
-              <div className="footer-name-km">សាលាបឋមសិក្សាប្រឡាយមាស</div>
-              <div className="footer-name">Pralay Meas Primary School</div>
-
-              <p className="footer-desc"> Nurturing Children with Knowledge, Values, and Excellence.</p>
-
+            <div>
+              <div className="footer-name-km">{ft.schoolNameKm}</div>
+              {/* <div className="footer-name">{ft.schoolNameEn}</div> */}
+              <p className="footer-desc">{ft.tagline}</p>
             </div>
           </div>
 
           <div className="footer-links">
-            {/* <h4>Navigation / ផ្លូវ</h4> */}
-            {[
-              ['home', 'Home / ទំព័រដើម'],
-              ['about', 'About / អំពីសាលា'],
-              ['management', 'Team / ក្រុមការងារ'],
-              // ['news', 'News / ព័ត៌មាន'],
-              ['contact', 'Contact / ទំនាក់ទំនង'],
-            ].map(([id, label]) => (
-              <button key={id} className="footer-link" onClick={() => navigate(id)}>{label}</button>
+            {navLinks.map(({ id, label }) => (
+              <button key={id} className="footer-link" onClick={() => navigate(id)}>
+                {label}
+              </button>
             ))}
           </div>
 
           <div className="footer-contact">
-            {/* <h4>Contact / ទំនាក់ទំនង</h4> */}
-            <div className="footer-contact-item">📍ឃុំប្រឡាយមាស ស្រុកកំពង់លែង​​ ខេត្តកំពង់ឆ្នាំង</div>
-            {/* <div onClick={() => window.location.href='mailto:pralaymeaspms@email.com'} className="footer-contact-item">📧 pralaymeaspms@email.com</div> */}
-            <div className="footer-contact-item">📧 Pralaymeaspms@email.com</div>
+            <div className="footer-contact-item">📍 {ft.address}</div>
+            <div className="footer-contact-item">📧 {ft.email}</div>
           </div>
-
-          {/* <div className="footer-contact">
-            <h4>គណៈគ្រប់គ្រងសាលា</h4>ខុំ
-            <div className="footer-contact-members">
-              <h5>នាយកសាលា</h5>
-              <p>( លោក សែប សុចាន់ )</p>
-            </div>
-
-            <div className="footer-contact-item">📞 088 600 5465</div>
-            <div className="footer-contact-item">📧 Sebsochann@email.com</div>
-            <div className="footer-contact-members">
-              <h5>នាយករង</h5>
-              <p>( លោក កិក សុភ័ណ្ឌ )</p>
-            </div>
-
-            <div className="footer-contact-item">📞 088 267 8006</div>
-            <div className="footer-contact-item">📧 keksophann@email.com</div>
-            <div className="footer-contact-members">
-              <h5>ជំនួយការបច្ចេកទេស ICT</h5>
-              <p>( លោក គាំង ជីវ័ន )</p>
-            </div>
-
-            <div className="footer-contact-item">📞 031 636 396 3</div>
-            <div className="footer-contact-item">📧 chivorn.tc@email.com</div>
-          </div> */}
         </div>
       </div>
+
       <div className="school-management">
-        <h4>គណៈគ្រប់គ្រងសាលា</h4>
+        <h4>{ft.mgmtHeading}</h4>
         <div className="footer-contact-members">
-          <h5>នាយកសាលា</h5>
-          <p>( លោក សែប សុចាន់ )</p>
+          <h5>{ft.principalName}</h5>
+          <p>{ft.principal}</p>
         </div>
-        <div className="footer-contact-item">📞 088 600 5465</div>
-        <div className="footer-contact-item">📧 Sebsochann@email.com</div>
+        <div className="footer-contact-item">📞 {ft.principalPhone}</div>
+        <div className="footer-contact-item">📧 {ft.principalEmail}</div>
         <div className="footer-contact-members">
-          <h5>នាយករង</h5>
-          <p>( លោក កិក សុភ័ណ្ឌ )</p>
+          <h5>{ft.viceNameKm}</h5>
+          <p>{ft.vicePrincipal}</p>
         </div>
-
-        <div className="footer-contact-item">📞 088 267 8006</div>
-        <div className="footer-contact-item">📧 keksophann@email.com</div>
-        {/* <div className="footer-contact-members">
-          <h5>ជំនួយការបច្ចេកទេស ICT</h5>
-          <p>( លោក គាំង ជីវ័ន )</p>
-        </div>
-        <div className="footer-contact-item">📞 031 636 396 3</div>
-        <div className="footer-contact-item">📧 chivorn.tc@email.com</div> */}
+        <div className="footer-contact-item">📞 {ft.vicePhone}</div>
+        <div className="footer-contact-item">📧 {ft.viceEmail}</div>
       </div>
+
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          {/* <span>© 2026 Pralay Meas Primary School. All rights reserved.</span> */}
-          <span className="footer-km">© ២០២៦ រៀបចំដោយ ICT សាលាបឋមសិក្សាប្រឡាយមាស </span>
+          <span className="footer-km">{ft.copyright}</span>
         </div>
       </div>
     </footer>

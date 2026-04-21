@@ -1,69 +1,50 @@
 // Classes.jsx  —  main list page
-import { useState } from "react";
-import { classesData } from "../../data/classData";
-import ClassDetail from "../ClassDetail/ClassDetail"; // detail page component     
-import "./Classes.css";
+import { useApp } from "../../AppContext"
+import { t } from "../../data/lang_data"
+import { classesData } from "../../data/classData"
+import ClassDetail from "../ClassDetail/ClassDetail"
+import { useState } from "react"
+import "./Classes.css"
 
 function ClassCard({ cls, lang, onClick }) {
-  const t = (en, kh) => lang === "en" ? en : kh;
+  const tx = t(lang)
+  const kh = lang === 'km'
   return (
     <button className="cc-card" style={{ "--cc": cls.color }} onClick={onClick}>
       <div className="cc-emoji">
-        { <h2 className="cc-grade">{t(cls.grade, cls.gradeKh)}</h2>}
+        <h2 className="cc-grade">{kh ? cls.gradeKh : cls.grade}</h2>
       </div>
       <div className="cc-body">
-        <h2 className="cc-grade">{t(cls.teacher.name, cls.teacher.nameKh)}</h2>
-        {/* <p className="cc-teacher">{t(cls.teacher.name, cls.teacher.nameKh)}</p> */}
+        <h2 className="cc-grade">{kh ? cls.teacher.nameKh : cls.teacher.name}</h2>
         <div className="cc-chips">
-          {/* <span className="cc-chip">{t(cls.room, cls.roomKh)}</span> */}
-          <span className="cc-chip">👦 {cls.monthlyResults[0]?.students?.length ?? "—"} {t("students","សិស្ស")}</span>
+          <span className="cc-chip">
+            👦 {cls.monthlyResults[0]?.students?.length ?? "—"} {tx.classes.students}
+          </span>
         </div>
       </div>
       <span className="cc-arrow">›</span>
       <div className="cc-bar" />
     </button>
-  );
+  )
 }
 
 export default function Classes() {
-  const [lang, setLang]     = useState("kh");
-  const [selected, setSelected] = useState(null);
-  const t = (en, kh) => lang === "en" ? en : kh;
+  const { lang } = useApp()
+  const [selected, setSelected] = useState(null)
+  const tx = t(lang)
 
-  const goTo = (cls) => { setSelected(cls); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const goBack = ()  => { setSelected(null); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const goTo  = (cls) => { setSelected(cls); window.scrollTo({ top: 0, behavior: "smooth" }) }
+  const goBack = ()   => { setSelected(null); window.scrollTo({ top: 0, behavior: "smooth" }) }
 
   return (
     <section className="classes-section">
-
-      {/* Language toggle */}
-      {/* <div className="topbar">
-        <button className="lang-btn" onClick={() => setLang(lang === "en" ? "kh" : "en")}>
-          {lang === "en" ? "🇰🇭 ខ្មែរ" : "🇬🇧 English"}
-        </button>
-      </div> */}
 
       {/* ═══ LIST PAGE ═══ */}
       {!selected && (
         <>
           <header className="page-header">
-            {/* <div className="page-badge">🏫 {t("Pralay Meas Primary School","សាលាបឋមសិក្សាប្រឡាយមាស")}</div> */}
-            <h1 className="page-title">{t("Checkout our Classes","ថ្នាក់រៀនរបស់យើង")}</h1>
-            {/* <p className="page-sub">
-              {t(
-                "Click any class card to explore teacher profile, weekly schedule, cleaning groups & monthly results.",
-                "ចុចលើប័ណ្ណថ្នាក់ ដើម្បីមើលប្រវត្តិគ្រូ កាលវិភាគ ក្រុមសំអាត និងលទ្ធផលសិក្សា។"
-              )}
-            </p> */}
-            {/* <div className="stats-row">
-              <div className="stat"><span className="stat-n">6</span><span className="stat-l">{t("Grades","ថ្នាក់ទី")}</span></div>
-              <div className="stat-div"/>
-              <div className="stat"><span className="stat-n">332</span><span className="stat-l">{t("Students","សិស្ស")}</span></div>
-              <div className="stat-div"/>
-              <div className="stat"><span className="stat-n">11</span><span className="stat-l">{t("Teachers","គ្រូ")}</span></div>
-            </div> */}
+            <h1 className="page-title">{tx.classes.pageTitle}</h1>
           </header>
-
           <div className="cards-list">
             {classesData.map((cls, i) => (
               <div key={cls.id} className="card-anim" style={{ "--di": i }}>
@@ -79,5 +60,5 @@ export default function Classes() {
         <ClassDetail cls={selected} lang={lang} onBack={goBack} />
       )}
     </section>
-  );
+  )
 }

@@ -12,7 +12,8 @@
   --off-white:   #f8f5ee;
   --text-muted:  #9eb3cc;
   --text-dim:    #6a8aaa;
-  --border:      rgba(201, 151, 42, 0.2);
+  --border:       rgba(10, 10, 147, 0.332);
+   /* border: 1px solid rgba(10, 10, 147, 0.332); */
   --border-hover:rgba(201, 151, 42, 0.5);
   --shadow-card: 0 4px 24px rgba(0,0,0,0.35);
   --shadow-hover: 0 8px 40px rgba(0,0,0,0.5);
@@ -227,4 +228,48 @@ body {
 }
 @media (min-width: 769px) {
   .hide-desktop { display: none !important; }
+}
+
+/* ===== Light Mode Theme ===== */
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap");
+
+:root.light {
+  --bg:          #fffbf4;
+  --white:       #ffffff;
+  --border:      #ffe0a0;
+  --border-hover:#ffb347;
+  --text:        #2d1a00;
+  --text-mid:    #5a3a0a;
+  --text-soft:   #8b6020;
+  --text-muted:  #8b6020;
+  --text-dim:    #a07030;
+  --primary:     #ff8c00;
+  --accent:      #ffd166;
+  --fn:          "Nunito", sans-serif;
+  --fk:          "Kantumruy Pro", sans-serif;
+
+  /* Map dark-mode names to light equivalents so existing components just work */
+  --navy:        #fffbf4;
+  --navy-mid:    #fff3e0;
+  --navy-light:  #ffe8b0;
+  --navy-card:   #fff8ec;
+  --gold:        #ff8c00;
+  --gold-light:  #e07000;
+  --gold-pale:   #5a3a0a;
+  --gold-glow:   rgba(255, 140, 0, 0.12);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 40px rgba(0,0,0,0.14);
+}
+
+:root.light body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+:root.light ::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+:root.light ::-webkit-scrollbar-thumb {
+  background: var(--primary);
 }

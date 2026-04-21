@@ -211,3 +211,159 @@
 
   .brand-km { display: none; }
 }
+
+/* ===== Language & Theme Controls ===== */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-controls--mobile {
+  display: none;
+}
+
+.ctrl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white; /* ← add this (or any color you want) */
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+  padding: 0.3rem 0.6rem;
+  min-width: 40px;
+  height: 32px;
+}
+.ctrl-btn.lang-btn {
+  background: #5b9bd5;
+}
+
+.ctrl-btn.lang-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.ctrl-btn:hover {
+  border-color: var(--gold);
+  background: var(--text-mid);
+}
+
+.lang-btn .ctrl-label {
+  font-family: 'Noto Serif Khmer', 'Kantumruy Pro', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 0.03em;
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+
+.lang-btn:hover .ctrl-label {
+  color: var(--gold-light);
+}
+
+.theme-btn span {
+  font-size: 1rem;
+  line-height: 1;
+  filter: grayscale(0.2);
+  transition: transform var(--transition);
+}
+
+.theme-btn:hover span {
+  transform: rotate(20deg) scale(1.15);
+}
+
+@media (max-width: 700px) {
+  .nav-controls--desktop {
+    display: none;
+  }
+
+  .nav-controls--mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    border-top: 1px solid var(--border);
+    margin-top: 0.25rem;
+  }
+
+  .ctrl-btn {
+    flex: 1;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .lang-btn .ctrl-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* Light mode overrides for navbar */
+:root.light .navbar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+:root.light .navbar.scrolled {
+  background: rgba(255, 251, 244, 0.97);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+:root.light .nav-links {
+  background: var(--bg);
+}
+
+:root.light .brand-km {
+  color: var(--text-mid);
+}
+
+:root.light .nav-en {
+  color: var(--text-mid);
+}
+
+:root.light .nav-km {
+  color: var(--text-soft);
+}
+
+:root.light .nav-item:hover .nav-en,
+:root.light .nav-item.active .nav-en {
+  color: var(--primary);
+}
+
+:root.light .nav-item:hover .nav-km,
+:root.light .nav-item.active .nav-km {
+  color: var(--primary);
+}
+
+:root.light .nav-item::after {
+  background: var(--primary);
+}
+
+:root.light .hamburger {
+  border-color: var(--border);
+}
+
+:root.light .hamburger span {
+  background: var(--text-mid);
+}
+
+:root.light .nav-controls--mobile {
+  border-top-color: var(--border);
+}
+
+:root.light .ctrl-btn {
+  border-color: var(--border);
+}
+
+:root.light .ctrl-btn:hover {
+  border-color: var(--primary);
+  background: var(--text-dim);
+}
+
+:root.light .lang-btn .ctrl-label {
+  color: var(--text-mid);
+}
+
+:root.light .lang-btn:hover .ctrl-label {
+  color: var(--primary);
+}

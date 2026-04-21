@@ -1,35 +1,26 @@
 // ClassDetail.jsx
-import { useState } from "react";
-import TeacherCard    from "../TeacherCard/TeacherCard";
-import WeeklySchedule from "../WeeklySchedule/WeeklySchedule";
-import CleaningGroups from "../CleaningGroups/CleaningGroups";
-import StudyResults   from "../StudyResults/StudyResults";
-import "./ClassDetail.css";
+import { useState } from "react"
+import { useApp } from "../../AppContext"
+import { t } from "../../data/lang_data"
+import TeacherCard    from "../TeacherCard/TeacherCard"
+import WeeklySchedule from "../WeeklySchedule/WeeklySchedule"
+import CleaningGroups from "../CleaningGroups/CleaningGroups"
+import StudyResults   from "../StudyResults/StudyResults"
+import "./ClassDetail.css"
 
-export default function ClassDetail({ cls, lang, onBack }) {
-  const [tab, setTab] = useState("info");
-  const t = (en, kh) => lang === "en" ? en : kh;
+export default function ClassDetail({ cls, onBack }) {
+  const { lang } = useApp()
+  const [tab, setTab] = useState("info")
+  const tx = t(lang)
+  const kh = lang === 'km'
 
   return (
     <div className="cd-wrap" style={{ "--cc": cls.color }}>
 
       {/* ── Back ── */}
       <button className="cd-back" onClick={onBack}>
-        ← {t("All Classes", "ថ្នាក់ទាំងអស់")}
+        {tx.classes.backBtn}
       </button>
-
-      {/* ── Hero ── */}
-      {/* <div className="cd-hero">
-        <div className="cd-hero-emoji">{cls.emoji}</div>
-        <div className="cd-hero-text">
-          <h2 className="cd-hero-grade">{t(cls.grade, cls.gradeKh)}</h2>
-          <div className="cd-hero-chips">
-            <span className="cd-chip">{t(cls.room, cls.roomKh)}</span>
-            <span className="cd-chip">👦 {cls.monthlyResults[0]?.students?.length ?? "—"} {t("students","សិស្ស")}</span>
-            <span className="cd-chip">👩‍🏫 {t(cls.teacher.name, cls.teacher.nameKh)}</span>
-          </div>
-        </div>
-      </div> */}
 
       {/* ── Tab bar ── */}
       <div className="cd-tab-bar">
@@ -38,15 +29,8 @@ export default function ClassDetail({ cls, lang, onBack }) {
           onClick={() => setTab("info")}
         >
           <span>📋</span>
-          <span>{t("Class Information", "ព័ត៌មានថ្នាក់")}</span>
+          <span>{tx.classes.weeklySchedule}</span>
         </button>
-        {/* <button
-          className={`cd-tab ${tab === "results" ? "cd-tab-active" : ""}`}
-          onClick={() => setTab("results")}
-        >
-          <span>📊</span>
-          <span>{t("Study Results", "លទ្ធផលសិក្សា")}</span>
-        </button> */}
       </div>
 
       {/* ══ TAB: CLASS INFORMATION ══ */}
@@ -55,26 +39,25 @@ export default function ClassDetail({ cls, lang, onBack }) {
 
           <section className="cd-section">
             <h3 className="cd-section-title">
-              {t("Teacher Profile", "ប្រវត្តិគ្រូ")}
+              {tx.classes.teacher}
             </h3>
-            {/* hav teacher mk nis mk b  🙏😒😵‍💫 */}
-            <TeacherCard teacher={cls.teacher} color={cls.color} lang={lang} />
+            <TeacherCard teacher={cls.teacher} color={cls.color} />
           </section>
 
           <section className="cd-section">
             <h3 className="cd-section-title">
-              🗓 {t("Weekly Schedule", "កាលវិភាគប្រចាំសប្ដាហ៍")}
-              <span className="cd-section-note">{t("Mon – Sat","ច – ស")}</span>
+              🗓 {tx.classes.weeklySchedule}
+              <span className="cd-section-note">{kh ? "ច – ស" : "Mon – Sat"}</span>
             </h3>
-            <WeeklySchedule weeklySchedule={cls.weeklySchedule} color={cls.color} lang={lang} />
+            <WeeklySchedule weeklySchedule={cls.weeklySchedule} color={cls.color} />
           </section>
 
           <section className="cd-section">
             <h3 className="cd-section-title">
-              🧹 {t("Daily Cleaning Groups", "ក្រុមសំអាតប្រចាំថ្ងៃ")}
-              <span className="cd-section-note">7 {t("students / group","នាក់ / ក្រុម")}</span>
+              🧹 {tx.classes.cleaningGroups}
+              <span className="cd-section-note">7 {kh ? "នាក់ / ក្រុម" : "students / group"}</span>
             </h3>
-            <CleaningGroups cleaningGroups={cls.cleaningGroups} color={cls.color} lang={lang} />
+            <CleaningGroups cleaningGroups={cls.cleaningGroups} color={cls.color} />
           </section>
         </div>
       )}
@@ -87,11 +70,10 @@ export default function ClassDetail({ cls, lang, onBack }) {
             clsGrade={cls.grade}
             clsGradeKh={cls.gradeKh}
             color={cls.color}
-            lang={lang}
           />
         </div>
       )}
 
     </div>
-  );
+  )
 }

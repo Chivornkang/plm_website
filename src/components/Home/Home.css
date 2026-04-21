@@ -135,7 +135,7 @@
   text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
     1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 
-  font-family: 'Moul', serif;
+  /* font-family: 'Moul', serif; */
   font-size: clamp(1.6rem, 5vw, 2.8rem);
   color: var(--gold-light);
   line-height: 1.25;
@@ -144,7 +144,6 @@
 }
 
 .hero-title-km {
-  font-family: 'Noto Serif Khmer', serif;
   font-size: clamp(1rem, 3vw, 1.4rem);
   color: var(--text-muted);
   margin-bottom: 1.2rem;
@@ -184,6 +183,92 @@
   position: relative;
   z-index: 1;
 } */
+
+/* Base button-29 style */
+.btn.btn-29,
+.btn-gold.btn-29,
+.btn-outline.btn-29 {
+  align-items: center;
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 18px;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+}
+
+/* Gold button — warm gradient matching your palette */
+.btn-gold.btn-29 {
+  background-image: radial-gradient(100% 100% at 100% 0, #ffd97a 0, #f5a623 100%);
+  box-shadow:
+    rgba(100, 60, 0, .4) 0 2px 4px,
+    rgba(100, 60, 0, .3) 0 7px 13px -3px,
+    rgba(180, 120, 0, .5) 0 -3px 0 inset;
+}
+
+.btn-gold.btn-29:focus {
+  box-shadow:
+    #c47f00 0 0 0 1.5px inset,
+    rgba(100, 60, 0, .4) 0 2px 4px,
+    rgba(100, 60, 0, .3) 0 7px 13px -3px,
+    #c47f00 0 -3px 0 inset;
+}
+
+.btn-gold.btn-29:hover {
+  box-shadow:
+    rgba(100, 60, 0, .4) 0 4px 8px,
+    rgba(100, 60, 0, .3) 0 7px 13px -3px,
+    #c47f00 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn-gold.btn-29:active {
+  box-shadow: #c47f00 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* Outline button — blue-violet gradient from the original */
+.btn-outline.btn-29 {
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  box-shadow:
+    rgba(45, 35, 66, .4) 0 2px 4px,
+    rgba(45, 35, 66, .3) 0 7px 13px -3px,
+    rgba(58, 65, 111, .5) 0 -3px 0 inset;
+}
+
+.btn-outline.btn-29:focus {
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+}
+
+.btn-outline.btn-29:hover {
+   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  transform: translateY(-2px);
+}
+
+.btn-outline.btn-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* ---- new btn  style  */
+
 .hero-marquee {
   width: 100%;
   overflow: hidden;
@@ -264,7 +349,6 @@
 }
 
 .news-title {
-  font-family: 'Playfair Display', serif;
   font-size: 1rem;
   color: var(--white);
   margin-bottom: 0.2rem;
@@ -272,7 +356,6 @@
 }
 
 .news-title-km {
-  font-family: 'Noto Serif Khmer', serif;
   font-size: 0.78rem;
   color: var(--text-muted);
   margin-bottom: 0.7rem;

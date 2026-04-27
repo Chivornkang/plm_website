@@ -10,6 +10,7 @@ import bongsol from "../../assets/teachers/kru_sol.jpg";
 import kru_rorn from "../../assets/teachers/teacher_rorn.jpg";
 import kru_phorn from "../../assets/teachers/teacher_phorn.jpg";
 import principle from "../../assets/teachers/principle.jpg";
+import kindergaten from "../../assets/teachers/​kindergaten.jpg";
 // TODO: import nhunsaromAvatar from "../../assets/teachers/nhung_sarom.jpg";
 
 
@@ -46,14 +47,14 @@ export const classesData = [
     room: "Room K1", roomKh: "បន្ទប់ K១",
     sessionType: "morning", // morning only
     teacher: {
-      name: "Miss. Nhung Sarom", nameKh: "អ្នកគ្រូ ញូង សារុំ",
+      name: "Mrs. Nhung Sarom", nameKh: "អ្នកគ្រូ ញូង សារុំ",
       title: "Kindergarten Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់មត្តេយ្យ",
-      experience: "5 years", experienceKh: "៥ ឆ្នាំ",
+      experience: "30 years", experienceKh: "៣០ ឆ្នាំ",
       phone: "", email: "",
       // TODO: replace with real avatar → avatar: nhunsaromAvatar
-      avatar: kru_phorn,
-      bio: "Hello! I'm Miss Nhung Sarom, the Kindergarten teacher. I love kids and am passionate about nurturing young learners in a warm, playful and caring environment.",
-      bioKh: "សួស្តី ខ្ញុំឈ្មោះ ញូង សារុំ ជាគ្រូបន្ទុកថ្នាក់មត្តេយ្យ ខ្ញុំស្រឡាញ់កុមារ ហើយខិតខំបំប៉នពួកគេក្នុងបរិយាកាសសប្បាយ ក្តៅគ្រប់ និងពោរពេញដោយការយកចិត្តទុកដាក់។",
+      avatar: kindergaten,
+      bio: "Hello! I'm Mrs Nhung Sarom, the Kindergarten teacher. I love kids and am passionate about nurturing young learners in a warm, playful and caring environment.",
+      bioKh: "សួស្តី ខ្ញុំឈ្មោះ ញូង សារុំ ជាគ្រូបន្ទុកថ្នាក់មត្តេយ្យ ខ្ញុំស្រឡាញ់កុមារ ហើយ ចូលចិត្តបង្កើតបរិយាកាសសប្បាយៗជាមួយពួកគេ។",
       metafb: "",
       telegram: "",
       youtube: "",
@@ -172,12 +173,12 @@ export const classesData = [
   // ─────────────────────────────────────────── GRADE 1
   {
     id: 2,
-    grade: "Grade 1", gradeKh: "ថ្នាក់ទី១ (ក)",
+    grade: "Grade 1", gradeKh: "ថ្នាក់ទី១",
     emoji: "🌱", color: "#FF8C00",
     room: "Room 101", roomKh: "បន្ទប់ ១០១",
     sessionType: "morning",
     teacher: {
-      name: "Miss. Say Kory", nameKh: "អ្នកគ្រូ សាយ កយ",
+      name: "Mrs. Say Kory", nameKh: "អ្នកគ្រូ សាយ កយ",
       title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "6 years", experienceKh: "៦ ឆ្នាំ",
       phone: "012 345 678", email: "sokha@pralaymeas.edu.kh", avatar: saykoryAvatar,
@@ -282,15 +283,15 @@ export const classesData = [
   // ─────────────────────────────────────────── GRADE 2
   {
     id: 2,
-    grade: "Grade 2", gradeKh: "ថ្នាក់ទី២​ (ក)",
-    emoji: chivornAvatar, color: "#1e1d1a",
+    grade: "Grade 2", gradeKh: "ថ្នាក់ទី២",
+    emoji: chivornAvatar, color: "#00ab2b",
     room: "Room 5A ", roomKh: "ថ្នាក់ ​២(ខ)​",
     sessionType: "afternoon",
     teacher: {
       name: "Mr. CHIVORN KANG", nameKh: "លោកគ្រូ គាំង ជីវ័ន",
       title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "8 years", experienceKh: "8 ឆ្នាំ",
-      phone: "0316363963", email: "chivorn.tc@gmail.edu.kh", avatar: chivornAvatar,
+      phone: "0316363963", email: "chivorn.tc@gmail.com", avatar: chivornAvatar,
       bio: "Greeting! I'm Mr. Chivorn Kang, the Grade 2 homeroom teacher for the 2026-2027 school year. I specialize in early childhood education and am responsible for ICT assistance and school environment support. And I love to support my students to grow and learn in a fun and engaging way.",
       bioKh: "សួស្តី ខ្ញុំឈ្មោះ គាំង ជីវ័ន ជាគ្រូបន្ទុកថ្នាក់ទី២ ក្នុងឆ្នាំសិក្សា​២០២៦-២០២៧ និងទទួលបន្ទុកផ្នែកជំនួយការ ICT និង​ បរិស្ថានសាលា។",
       metafb: "https://www.facebook.com/jiivorn.g1",
@@ -360,15 +361,13 @@ export const classesData = [
       ],
     },
     cleaningGroups: [
-      ["Pisey", "Ratanak", "Sophal", "Dyna", "Menghour", "Sreynich", "Chanmoly"],
-      ["Raksmey", "Vira", "Sokunthea", "Lyda", "Ponleak", "Thida", "Narith"],
-      ["Samnang", "Chankrisna", "Boranin", "Visal", "Mengly", "Sotheavy", "Chamroeun"],
-      ["Pisey", "Ratanak", "Sophal", "Dyna", "Menghour", "Sreynich", "Chanmoly"],
-      ["Raksmey", "Vira", "Sokunthea", "Lyda", "Ponleak", "Thida", "Narith"],
-      ["Samnang", "Chankrisna", "Boranin", "Visal", "Mengly", "Sotheavy", "Chamroeun"],
-      ["Chhorvy", "Bunna", "Sovanda", "Leakena", "Channitha", "Sambath", "Kanha"],
-      ["Rithy", "Sreymom", "Chanra", "Vanna", "Makara", "Sothea", "Phally"],
-      ["Mealea", "Rotanak", "Chanpiseth", "Sovath", "Vicheth", "Borin", "Solida"],
+      ["ខឿន ដាវីន", "ឃិន ផាត់", "ចំរើន ជូរី", "ចំរើន ផល្លា", " ឆុន រស្មី", "ឆុន ស្រីណែត"],
+      ["ឆុន សុគន់", "ឆូយ ស្រីលាប", "ជា ដារ៉ា", "ជុន សៀវឡុង", "ជ្រិន រ៉ាយុត"],
+      ["ណាក់ ផាន់ណា", "ណាត ចាន់ដាណុប", "ធឿន សុវណ្ណា", "ផល​ ផៃ", "ផុន ស្រីនីកា"],
+      ["សម្អាតរួម"],
+      ["ផៃ តារា", "ព្រាប ម៉េងហុង", "ភិន ចិនណាក់", "ភួង សុវណ្ណចេស្តា", "រ៉ាត់ រ៉ាវី"],
+      ["ផល សុផល", "អាត ម៉េងលី", "លិស ចាន់នូណា", "លឿង វណ្ណៈ", "សាន ផានុត"],
+      ["សុន ណាត់", "សឿន ស៊ីថាបេឡា", "សឿន មួយអ៊ីង", "សំ សុផា", "ហៃ សុមាន", "ឡុង ឆេងលីម"],
     ],
     monthlyResults: [
       mkMonth("January", "មករា", [
@@ -831,58 +830,6 @@ export const classesData = [
       ]),
     ],
   },
-  // ─────────────────────────────────────────── GRADE 6
-  // {
-  //   id: 7,
-  //   grade: "Grade 7", gradeKh: "ថ្នាក់ទី7",
-  //   emoji: "🏆", color: "#C46B09",
-  //   room: "Room 302", roomKh: "បន្ទប់ ៣០២",
-  //   teacher: {
-  //     name: "Mr. Sam Kosal", nameKh: "លោកគ្រូ សំ កុសល",
-  //     title: "Senior Teacher", titleKh: "គ្រូជាន់ខ្ពស់",
-  //     experience: "18 years", experienceKh: "១៨ ឆ្នាំ",
-  //     phone: "09695314", email: "Samkolsal@gmail.com", avatar: bongsol,
-  //     bio: "Senior teacher, expert in Mathematic. Passionate about fostering critical thinking and problem-solving skills.",
-  //     bioKh: "សួស្តី ខ្ញុំឈ្មោះ ពិសិទ្ធ ហេងសំ កុសល ជាគ្រូបន្ទុកថ្នាក់ទី៦ ក្នុងឆ្នាំសិក្សា២០២៦-២០២៧ ជំនាញខាងគណិតវិទ្យា និង​គ្រប់គ្រងឃ្លាំង សម្ភារៈសាលា។",
-  //     metafb: "https://www.facebook.com/jiivorn.g1",
-  //     telegram: "https://t.me/chivorn",
-  //     youtube: "https://www.youtube.com/@jiivorn-ជីវ័ន",
-  //   },
-  //   weeklySchedule: {
-  //     Monday: [{ time: "7:00–7:50", subject: "Khmer", subjectKh: "ភាសាខ្មែរ" }, { time: "7:50–8:40", subject: "Math", subjectKh: "គណិតវិទ្យា" }, { time: "8:40–9:30", subject: "English", subjectKh: "អង់គ្លេស" }, { time: "9:30–9:50", subject: "Break", subjectKh: "សម្រាក" }, { time: "9:50–10:40", subject: "Science", subjectKh: "វិទ្យាសាស្ត្រ" }, { time: "10:40–11:30", subject: "Computer", subjectKh: "កុំព្យូទ័រ" }],
-  //     Tuesday: [{ time: "7:00–7:50", subject: "Math", subjectKh: "គណិតវិទ្យា" }, { time: "7:50–8:40", subject: "English", subjectKh: "អង់គ្លេស" }, { time: "8:40–9:30", subject: "Social Studies", subjectKh: "សិក្សាសង្គម" }, { time: "9:30–9:50", subject: "Break", subjectKh: "សម្រាក" }, { time: "9:50–10:40", subject: "Khmer", subjectKh: "ភាសាខ្មែរ" }, { time: "10:40–11:30", subject: "PE", subjectKh: "កីឡា" }],
-  //     Wednesday: [{ time: "7:00–7:50", subject: "English", subjectKh: "អង់គ្លេស" }, { time: "7:50–8:40", subject: "Science", subjectKh: "វិទ្យាសាស្ត្រ" }, { time: "8:40–9:30", subject: "Khmer", subjectKh: "ភាសាខ្មែរ" }, { time: "9:30–9:50", subject: "Break", subjectKh: "សម្រាក" }, { time: "9:50–10:40", subject: "Math", subjectKh: "គណិតវិទ្យា" }, { time: "10:40–11:30", subject: "Computer", subjectKh: "កុំព្យូទ័រ" }],
-  //     Thursday: [{ time: "7:00–7:50", subject: "Science", subjectKh: "វិទ្យាសាស្ត្រ" }, { time: "7:50–8:40", subject: "Math", subjectKh: "គណិតវិទ្យា" }, { time: "8:40–9:30", subject: "English", subjectKh: "អង់គ្លេស" }, { time: "9:30–9:50", subject: "Break", subjectKh: "សម្រាក" }, { time: "9:50–10:40", subject: "Social Studies", subjectKh: "សិក្សាសង្គម" }, { time: "10:40–11:30", subject: "Art", subjectKh: "សិល្បៈ" }],
-  //     Friday: [{ time: "7:00–7:50", subject: "Khmer", subjectKh: "ភាសាខ្មែរ" }, { time: "7:50–8:40", subject: "Social Studies", subjectKh: "សិក្សាសង្គម" }, { time: "8:40–9:30", subject: "Computer", subjectKh: "កុំព្យូទ័រ" }, { time: "9:30–9:50", subject: "Break", subjectKh: "សម្រាក" }, { time: "9:50–10:40", subject: "Math", subjectKh: "គណិតវិទ្យា" }, { time: "10:40–11:30", subject: "English", subjectKh: "អង់គ្លេស" }],
-  //     Saturday: [{ time: "7:00–8:30", subject: "Exam Prep", subjectKh: "ត្រៀមប្រឡង" }, { time: "8:30–9:00", subject: "Break", subjectKh: "សម្រាក" }, { time: "9:00–10:00", subject: "Computer Lab", subjectKh: "មន្ទីរពិសោធន៍" }, { time: "10:00–11:00", subject: "Math Review", subjectKh: "ត្រួតពិនិត្យគណិត" }],
-  //   },
-  //   cleaningGroups: [
-  //     ["Piseth", "Chanda", "Vanna", "Sophorn", "Ratana", "Bunly", "Sreynich"],
-  //     ["Virak", "Daro", "Tola", "Boren", "Menghor", "Sopheap", "Samnang"],
-  //     ["Lyma", "Sokhom", "Chanthy", "Vanny", "Makra", "Sothy", "Phany"],
-  //     ["Kimba", "Bunthan", "Sovanny", "Leka", "Channy", "Sambo", "Kanhy"],
-  //     ["Sopheak", "Nakry", "Chanvary", "Bunly2", "Dyna", "Sreynit", "Bopha"],
-  //     ["Mealea", "Rotanak", "Chanpiseth", "Sovath", "Vicheth", "Borin", "Solida"],
-  //   ],
-  //   monthlyResults: [
-  //     mkMonth("January", "មករា", [
-  //       { name: "Piseth", nameKh: "ពិសិទ្ធ", score: 99 }, { name: "Chanda", nameKh: "ចន្ទ", score: 96 }, { name: "Vanna", nameKh: "វណ្ណ", score: 93 },
-  //       { name: "Sophorn", nameKh: "សុភ័ណ", score: 91 }, { name: "Ratana", nameKh: "រតនា", score: 89 }, { name: "Bunly", nameKh: "បុណ្យលី", score: 88 },
-  //       { name: "Sreynich", nameKh: "ស្រីនិច", score: 86 }, { name: "Virak", nameKh: "វីរៈ", score: 85 }, { name: "Daro", nameKh: "ដារ៉ូ", score: 83 },
-  //       { name: "Tola", nameKh: "តុលា", score: 82 }, { name: "Boren", nameKh: "បូរ៉េន", score: 80 }, { name: "Menghor", nameKh: "ម៉េងហ័រ", score: 79 },
-  //     ]),
-  //     mkMonth("February", "កុម្ភៈ", [
-  //       { name: "Chanda", nameKh: "ចន្ទ", score: 98 }, { name: "Piseth", nameKh: "ពិសិទ្ធ", score: 97 }, { name: "Sophorn", nameKh: "សុភ័ណ", score: 92 },
-  //       { name: "Vanna", nameKh: "វណ្ណ", score: 91 }, { name: "Ratana", nameKh: "រតនា", score: 89 }, { name: "Bunly", nameKh: "បុណ្យលី", score: 87 },
-  //       { name: "Sreynich", nameKh: "ស្រីនិច", score: 85 }, { name: "Virak", nameKh: "វីរៈ", score: 84 }, { name: "Daro", nameKh: "ដារ៉ូ", score: 82 },
-  //       { name: "Tola", nameKh: "តុលា", score: 81 }, { name: "Boren", nameKh: "បូរ៉េន", score: 79 }, { name: "Menghor", nameKh: "ម៉េងហ័រ", score: 78 },
-  //     ]),
-  //     mkMonth("March", "មីនា", [
-  //       { name: "Piseth", nameKh: "ពិសិទ្ធ", score: 100 }, { name: "Vanna", nameKh: "វណ្ណ", score: 95 }, { name: "Chanda", nameKh: "ចន្ទ", score: 93 },
-  //       { name: "Sophorn", nameKh: "សុភ័ណ", score: 91 }, { name: "Ratana", nameKh: "រតនា", score: 89 }, { name: "Bunly", nameKh: "បុណ្យលី", score: 88 },
-  //       { name: "Sreynich", nameKh: "ស្រីនិច", score: 86 }, { name: "Virak", nameKh: "វីរៈ", score: 85 }, { name: "Daro", nameKh: "ដារ៉ូ", score: 83 },
-  //       { name: "Tola", nameKh: "តុលា", score: 82 }, { name: "Boren", nameKh: "បូរ៉េន", score: 80 }, { name: "Menghor", nameKh: "ម៉េងហ័រ", score: 79 },
-  //     ]),
-  //   ],
-  // },
+  // ──────────────────────────────────────────
+
 ];

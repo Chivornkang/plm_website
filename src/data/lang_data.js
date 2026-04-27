@@ -56,14 +56,14 @@ const data = {
       },
       {
         labelEn: 'Total Staff', labelKm: 'បុគ្គលិក',
-        valEn:   '11 Members',
-        valKm:   '១១ នាក់',
+        valEn:   '9 Members',
+        valKm:   '៩ នាក់',
       },
-      {
-        labelEn: 'Location', labelKm: 'ទីតាំង',
-        valEn:   'Pralay Meas Commune, Kampong Laeang District, Kampong Chhnang Province',
-        valKm:   'ឃុំប្រឡាយមាស ស្រុកកំពង់លែង ខេត្តកំពង់ឆ្នាំង',
-      },
+      // {
+      //   labelEn: 'Location', labelKm: 'ទីតាំង',
+      //   valEn:   'Pralay Meas Commune, Kampong Laeang District, Kampong Chhnang Province',
+      //   valKm:   'ឃុំប្រឡាយមាស ស្រុកកំពង់លែង ខេត្តកំពង់ឆ្នាំង',
+      // },
     ],
 
     missionHeading: { en: 'Our Mission', km: 'បេសកកម្ម' },
@@ -142,9 +142,9 @@ const data = {
     email:        { en: 'Email',     km: 'អ៊ីម៉ែល' },
     emailVal:     { en: 'pralaymeas@gmail.com', km: 'pralaymeas@gmail.com' },
     emailNote:    { en: 'We reply within 1–2 days', km: 'ឆ្លើយតបក្នុង ១–២ ថ្ងៃ' },
-    facebook:     { en: 'Facebook',  km: 'ហ្វេសប៊ុក' },
-    facebookVal:  { en: 'facebook.com/PralayMeasPrimarySchool', km: 'facebook.com/PralayMeasPrimarySchool' },
-    facebookName: { en: 'Pralay Meas Primary School', km: 'សាលាបឋមសិក្សាប្រឡាយមាស' },
+    // facebook:     { en: 'Facebook',  km: 'ហ្វេសប៊ុក' },
+    // facebookVal:  { en: 'facebook.com/PralayMeasPrimarySchool', km: 'facebook.com/PralayMeasPrimarySchool' },
+    // facebookName: { en: 'សាលាបឋមសិក្សាប្រឡាយមាស-Pralay Meas Primary School', km: 'សាលាបឋមសិក្សាប្រឡាយមាស-Pralay Meas Primary School' },
     hoursTitle:   { en: '🕐 School Hours', km: '🕐 ម៉ោងសិក្សា' },
     hours: [
       {

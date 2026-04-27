@@ -61,7 +61,7 @@ export default function WeeklySchedule({ weeklySchedule, color }) {
               style={{ "--sc": sc, animationDelay: `${i * 0.055}s` }}>
               <div className="ws-slot-time">{slot.time}</div>
               {isBreak ? (
-                <div className="ws-slot-break-inner">☕ {kh ? "សម្រាក" : "Break"}</div>
+                <div className="ws-slot-break-inner"> {kh ? "សម្រាក" : "Break"}</div>
               ) : (
                 <div className="ws-slot-body">
                   <div className="ws-slot-dot" />

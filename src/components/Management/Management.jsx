@@ -5,21 +5,53 @@ import { t } from '../../data/lang_data'
 import { createPortal } from 'react-dom'
 import TeacherCard from '../TeacherCard/TeacherCard'
 import { classesData } from '../../data/classData'
-import principlel from "../../../assets/teachers/principle.jpg"
+import principalImg from "../../../assets/teachers/principle.jpg"
+import vicePrincipalImg from "../../../assets/teachers/teacher_phorn.jpg"
+import commitee from "../../../assets/teachers/commitee.jpg"
 
 
 const leadership = [
   {
     id: 'Committee',
     role: 'Management Committee', roleKh: 'គណៈកម្មការសាលា',
-    name: '', nameKh: '',
-    avatar: principlel, tier: 'top',
+    title: 'Management Committee',   titleKh: 'គណៈកម្មការសាលា',
+    name: 'Mol Sokhun', nameKh: 'លោក ម៉ុល សុខុន',
+    bio: 'Oversees the overall governance and strategic direction of Pralay Meas Primary School.',
+    bioKh: 'លោក ម៉ុល សុខុន ជាគណៈកម្មការសាលា មាននាទីត្រួតពិនិត្យការទូទៅនិង​ទំនាក់ទំនងជាមួយសហគមន៍',
+    experience: '', experienceKh: '',
+    avatar: commitee, tier: 'top',
+    phone: '097​862​4246',
+    email: '',
+    metafb: '',
+    // telegram: 'https://t.me/+855​​ 97​862​4246',
   },
   {
     id: 'principal',
     role: 'Principal', roleKh: 'នាយក',
-    name: '[Ex-Principal Name]', nameKh: 'ឈ្មោះអតីតនាយក',
-    avatar: principlel, tier: 'mid',
+    title: 'Principal',              titleKh: 'នាយកសាលា',
+    name: 'Seb Sochann', nameKh: 'លោក សែប សុចាន់',
+    bio: 'Leads the school community with dedication to quality education and student well-being.',
+    bioKh: 'ខ្ញុំជានាយកសាលាបឋមសិក្សាប្រឡាយមាស ដឹកនាំសាលាដោយការប្តេជ្ញាចិត្តខ្ពស់ចំពោះការអប់រំ និងសុខភាពសិស្ស។',
+    experience: '', experienceKh: '',
+    avatar: principalImg, tier: 'mid',
+    phone: '088 600 5465',
+    email: 'Sebsochann@email.com',
+    metafb: 'https://web.facebook.com/seb.sochann.1',
+    telegram: 'https://t.me/+855886005465',
+  },
+  {
+    id: 'vicePrincipal',
+    role: 'Vice Principal', roleKh: 'នាយករង',
+    title: 'Vice Principal',         titleKh: 'នាយករងសាលា',
+    name: 'Kek Sophann', nameKh: 'លោក កិក សុភ័ណ្ឌ',
+    bio: 'Supports the principal in daily school operations and teacher development. Manages the library and school resources.',
+    bioKh: 'ជួយដឹកនាំប្រតិបត្តិការប្រចាំថ្ងៃ ការអភិវឌ្ឍន៍គ្រូបង្រៀន គ្រប់គ្រងបណ្ណាល័យ និង​​ សម្ភារៈសាលា​',
+    experience: '', experienceKh: '',
+    avatar: vicePrincipalImg, tier: 'mid',
+    phone: '088 267 8006',
+    email: 'keksophann@email.com',
+    metafb: 'https://web.facebook.com/kek.sophan.9',
+    telegram: 'https://t.me/+855882678006',
   },
 ]
 
@@ -51,8 +83,9 @@ function OrgNode({ person, color, onClick, variant = 'default' }) {
       </div>
       <div className="org-node-info">
         <div className="org-node-role">{person.role || person.grade || person.gradeKh}</div>
-        <div className="org-node-name">{person.name}</div>
-        <div className="org-node-name-km">{person.nameKh}</div>
+        <div className="org-node-name">{person.nameKh}</div>
+        <div className="org-node-name-km">{person.name}</div>
+        
       </div>
       {/* <span className="org-node-hint">{tx.management.viewProfile}</span> */}
     </button>
@@ -121,26 +154,25 @@ export default function Management() {
       <div className="container mgmt-content">
         <div className="org-chart animate-up delay-1">
 
-          {/* ROW 1 — Principal + Ex-Principal */}
+          {/* ROW 1 — Committee + Principal */}
           <div className="org-row org-row--top">
             <OrgNode
               person={{ ...leadership[0], role: kh ? leadership[0].roleKh : leadership[0].role }}
               color="#c9971e" variant="principal"
               onClick={p => open(p, '#c9971e')}
             />
-            <div className="org-v-stub" />
             <div className="org-h-line" />
-            {/* <div className="org-v-stub" /> */}
             <OrgNode
               person={{ ...leadership[1], role: kh ? leadership[1].roleKh : leadership[1].role }}
               color="#a07830" variant="ex"
               onClick={p => open(p, '#a07830')}
             />
           </div>
-   {/* <div className="org-h-line" /> */}
+
+          {/* ROW 2 — Vice Principal */}
           <div className="org-v-stub" />
           <OrgNode
-            person={{ ...leadership[1], role: kh ? leadership[1].roleKh : leadership[1].role }}
+            person={{ ...leadership[2], role: kh ? leadership[2].roleKh : leadership[2].role }}
             color="#a07830" variant="ex"
             onClick={p => open(p, '#a07830')}
           />

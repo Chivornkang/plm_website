@@ -45,8 +45,7 @@ export default function About() {
 
       <div className="container about-content">
 
-        {/* ── Info card — full width ── */}
-        <div className="about-info-card animate-up delay-1">
+        {/* <div className="about-info-card animate-up delay-1">
           <div className="about-info-header">
             <h2>{ab.infoHeading}</h2>
           </div>
@@ -62,7 +61,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* ── Mission + Vision — side by side ── */}
         <div className="mv-row">

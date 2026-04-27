@@ -28,7 +28,6 @@ export default function ClassDetail({ cls, onBack }) {
           className={`cd-tab ${tab === "info" ? "cd-tab-active" : ""}`}
           onClick={() => setTab("info")}
         >
-          <span>📋</span>
           <span>{tx.classes.weeklySchedule}</span>
         </button>
       </div>

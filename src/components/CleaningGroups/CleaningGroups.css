@@ -62,6 +62,86 @@
   .cg-card { padding: .75rem .65rem; border-radius: 12px; }
 }
 
+/* ── Thursday "Cleaning Together" card ─────────────────────── */
+.cg-card--together {
+  /* Span full row width */
+  grid-column: 1 / -1;
+
+  /* Layout: rotated label on the left, content on the right */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.2rem;
+
+  /* Slightly more prominent background */
+  background: color-mix(in srgb, var(--cc) 10%, white);
+  border: 2px solid color-mix(in srgb, var(--cc) 35%, transparent);
+  border-radius: 16px;
+
+  /* Subtle stripe pattern to distinguish */
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    color-mix(in srgb, var(--cc) 4%, transparent) 8px,
+    color-mix(in srgb, var(--cc) 4%, transparent) 16px
+  );
+}
+.cg-card--together:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--cc) 20%, transparent);
+}
+
+/* ── Rotated label ──────────────────────────────────────────── */
+.cg-together-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  /* Fixed size so rotation looks tidy */
+  width: 2rem;
+  height: 100%;
+  min-height: 3rem;
+}
+
+.cg-together-label span {
+  display: block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg); /* bottom-to-top reading direction */
+
+  font-family: "Kantumruy Pro", "Nunito", sans-serif;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--cc);
+  white-space: nowrap;
+  opacity: .85;
+}
+
+/* Divider between label and content */
+.cg-card--together .cg-day-header {
+  border-left: 2px dashed color-mix(in srgb, var(--cc) 30%, transparent);
+  border-bottom: none;
+  padding-left: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .cg-card--together {
+    gap: .8rem;
+    padding: .75rem .9rem;
+  }
+  .cg-together-label span {
+    font-size: .68rem;
+  }
+}
+
 /* ── Day header ─────────────────────────────────────────────── */
 .cg-day-header {
   display: flex;

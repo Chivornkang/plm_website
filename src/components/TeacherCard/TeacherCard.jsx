@@ -27,6 +27,9 @@ export default function TeacherCard({ teacher, color }) {
   const { lang } = useApp()
   const kh = lang === 'km'
 
+  const experience = kh ? teacher.experienceKh : teacher.experience
+  const bio        = kh ? teacher.bioKh        : teacher.bio
+
   return (
     <div className="tc-wrap" style={{ "--cc": color }}>
       <div className="tc-top">
@@ -36,34 +39,44 @@ export default function TeacherCard({ teacher, color }) {
         <div className="tc-identity">
           <div className="tc-title-badge">{kh ? teacher.titleKh : teacher.title}</div>
           <h3 className="tc-name">{kh ? teacher.nameKh : teacher.name}</h3>
-          <p className="tc-bio">{kh ? teacher.bioKh : teacher.bio}</p>
+          {bio && <p className="tc-bio">{bio}</p>}
         </div>
       </div>
 
       <div className="tc-divider" />
 
       <div className="tc-details">
-        <div className="tc-detail">
-          <span className="tc-detail-icon">🎓</span>
-          <div>
-            <div className="tc-detail-label">{kh ? "បទពិសោធ" : "Experience"}</div>
-            <div className="tc-detail-val">{kh ? teacher.experienceKh : teacher.experience}</div>
+        {experience && (
+          <div className="tc-detail">
+            <span className="tc-detail-icon"></span>
+            <div>
+              <div className="tc-detail-label">{kh ? "បទពិសោធ" : "Experience"}</div>
+              <div className="tc-detail-val">{experience}</div>
+            </div>
           </div>
-        </div>
-        <div className="tc-detail">
-          <span className="tc-detail-icon">📞</span>
-          <div>
-            <div className="tc-detail-label">{kh ? "ទូរស័ព្ទ" : "Phone"}</div>
-            <div className="tc-detail-val">{teacher.phone}</div>
+        )}
+        {teacher.phone && (
+          <div className="tc-detail">
+            <span className="tc-detail-icon"></span>
+            <div>
+              <div className="tc-detail-label">{kh ? "ទូរស័ព្ទ" : "Phone"}</div>
+              <a href={`tel:${teacher.phone}`} className="tc-detail-val tc-link">
+                {teacher.phone}
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="tc-detail">
-          <span className="tc-detail-icon">📧</span>
-          <div>
-            <div className="tc-detail-label">{kh ? "អ៊ីម៉ែល" : "Email"}</div>
-            <div className="tc-detail-val tc-email">{teacher.email}</div>
+        )}
+        {teacher.email && (
+          <div className="tc-detail">
+            <span className="tc-detail-icon"></span>
+            <div>
+              <div className="tc-detail-label">{kh ? "អ៊ីម៉ែល" : "Email"}</div>
+              <a href={`mailto:${teacher.email}`} className="tc-detail-val tc-email tc-link">
+                {teacher.email}
+              </a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <SocialIcons teacher={teacher} />

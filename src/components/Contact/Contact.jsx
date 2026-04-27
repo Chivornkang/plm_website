@@ -1,16 +1,36 @@
 import './Contact.css'
 import { useApp } from '../../AppContext'
 import { t } from '../../data/lang_data'
+import { FaFacebook, FaTelegram, FaYoutube } from "react-icons/fa"
 
+function SocialIcons({ teacher }) {
+  const links = [
+    { key: "metafb", Icon: FaFacebook, label: "Facebook", cls: "tc-social--fb" },
+    { key: "telegram", Icon: FaTelegram, label: "Telegram", cls: "tc-social--tg" },
+    { key: "youtube", Icon: FaYoutube, label: "YouTube", cls: "tc-social--yt" },
+  ]
+  const visible = links.filter(({ key }) => teacher[key])
+  if (!visible.length) return null
+  return (
+    <div className="tc-socials">
+      {visible.map(({ key, Icon, label, cls }) => (
+        <a key={key} href={teacher[key]} target="_blank" rel="noopener noreferrer"
+          className={`tc-social-btn ${cls}`} aria-label={label} title={label}>
+          <Icon /><span>{label}</span>
+        </a>
+      ))}
+    </div>
+  )
+}
 export default function Contact() {
   const { lang } = useApp()
   const tx = t(lang)
   const ct = tx.contact
 
   const contactInfo = [
-    { icon: '📞', label: ct.phone,    val: ct.phoneVal,    note: ct.phoneHours },
-    { icon: '📧', label: ct.email,    val: ct.emailVal,    note: ct.emailNote },
-    { icon: '📘', label: ct.facebook, val: ct.facebookVal, note: ct.facebookName },
+    { icon: '', label: ct.phone, val: ct.phoneVal, note: ct.phoneHours },
+    { icon: '', label: ct.email, val: ct.emailVal, note: ct.emailNote },
+    // { icon: '', label: ct.facebook, val: ct.facebookVal, note: ct.facebookName },
   ]
 
   return (
@@ -41,7 +61,7 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-
+{/* <SocialIcons teacher={teacher} /> */}
             {/* School Hours */}
             <div className="hours-block animate-up delay-2">
               <h3 className="hours-title">{ct.hoursTitle}</h3>
@@ -64,7 +84,6 @@ export default function Contact() {
           {/* Right column — address + map */}
           <div className="contact-info-list animate-up delay-1">
             <div className="contact-info-item">
-              <div className="ci-icon">📍</div>
               <div className="ci-body">
                 <div className="ci-label">{ct.address}</div>
                 <div className="ci-val">{lang === 'km' ? ct.addressValEn.km : ct.addressValEn.en}</div>

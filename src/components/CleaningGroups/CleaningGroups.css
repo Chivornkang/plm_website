@@ -4,7 +4,7 @@
 }
 
 .cg-note {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .82rem;
   color: #8b6020;
   background: #fffbf0;
@@ -159,7 +159,7 @@
 }
 
 .cg-day-name {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .88rem;
   font-weight: 800;
   color: #2d1a00;
@@ -171,7 +171,7 @@
 }
 
 .cg-member-count {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .7rem;
   color: var(--cc);
   font-weight: 700;

@@ -5,7 +5,7 @@
 .cd-back {
   background: none; border: 2px solid #ffe0a0;
   border-radius: 999px; padding: .38rem 1.05rem;
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .83rem; font-weight: 700; color: #5a3a0a;
   cursor: pointer; display: inline-flex; align-items: center; gap: .3rem;
   margin-bottom: 1.4rem; transition: all .2s;
@@ -32,12 +32,12 @@
   box-shadow: 0 5px 16px rgba(255,140,0,.22);
 }
 .cd-hero-grade {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: 1.5rem; font-weight: 900; color: #2d1a00; margin: 0 0 .42rem;
 }
 .cd-hero-chips { display: flex; gap: .4rem; flex-wrap: wrap; }
 .cd-chip {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .78rem; font-weight: 700; color: var(--cc);
   background: color-mix(in srgb, var(--cc) 9%, white);
   border: 1.5px solid color-mix(in srgb, var(--cc) 24%, transparent);
@@ -55,7 +55,7 @@
 .cd-tab {
   flex: 1; border: none; background: none;
   border-radius: 12px; padding: .7rem .9rem;
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .9rem; font-weight: 700; color: #8b6020;
   cursor: pointer; display: flex; align-items: center;
   justify-content: center; gap: .4rem; transition: all .2s;
@@ -80,8 +80,8 @@
 /* Section */
 .cd-section { margin-bottom: 1.25rem; }
 .cd-section-title {
-  font-family: "Kantumruy Pro", sans-serif;
-  font-size: .95rem; font-weight: 800; color: #2d1a00;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
+  font-size: 1.5rem; font-weight: 800; color: #2d1a00;
   margin: 0 0 .75rem; display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
 }
 .cd-section-note {

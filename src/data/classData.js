@@ -179,7 +179,7 @@ export const classesData = [
     sessionType: "morning",
     teacher: {
       name: "Mrs. Say Kory", nameKh: "អ្នកគ្រូ សាយ កយ",
-      title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
+      title: "Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "6 years", experienceKh: "៦ ឆ្នាំ",
       phone: "012 345 678", email: "sokha@pralaymeas.edu.kh", avatar: saykoryAvatar,
       bio: "Greeting! I'm Say Kory, the Grade 1 homeroom teacher for the 2026-2027 school year. I love Math and am passionate about making learning fun and engaging for my little students. I enjoy working with young children and helping them discover the joy of learning.",
@@ -289,7 +289,7 @@ export const classesData = [
     sessionType: "afternoon",
     teacher: {
       name: "Mr. CHIVORN KANG", nameKh: "លោកគ្រូ គាំង ជីវ័ន",
-      title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
+      title: "Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "8 years", experienceKh: "8 ឆ្នាំ",
       phone: "0316363963", email: "chivorn.tc@gmail.com", avatar: chivornAvatar,
       bio: "Greeting! I'm Mr. Chivorn Kang, the Grade 2 homeroom teacher for the 2026-2027 school year. I specialize in early childhood education and am responsible for ICT assistance and school environment support. And I love to support my students to grow and learn in a fun and engaging way.",
@@ -401,7 +401,7 @@ export const classesData = [
     sessionType: "morning",
     teacher: {
       name: "Mr. Sok Saran", nameKh: "លោកគ្រូ សុខ សារ៉ន",
-      title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
+      title: "Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "6 years", experienceKh: "៦ ឆ្នាំ",
       phone: "096 567 890", email: "channary@pralaymeas.edu.kh", avatar: kru_rorn,
       bio: "Hello I'm Sok Saran, the Grade 3 homeroom teacher for the 2026-2027 school year. I do love Social Studies and Science subjects engaging and fun for my students.",
@@ -510,10 +510,10 @@ export const classesData = [
     room: "Room 202", roomKh: "បន្ទប់ ២០២",
     teacher: {
       name: "Mr. Ses Sopheara", nameKh: "លោកគ្រូ សេះ សុភារ៉ា",
-      title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
+      title: "Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "15 years", experienceKh: "១៥ ឆ្នាំ",
       phone: "077 890 123", email: "sopheara@gmail.com", avatar: bongra,
-      bio: "Greeting! I'm Mr. Ses Sopheara, the class teacher for Grade 4 in the 2026-2027 school year. I specialize in Khmer literature language and am responsible for school discipline management and ICT assistance support.",
+      bio: "Greeting! I'm Mr. Ses Sopheara, the Teacher for Grade 4 in the 2026-2027 school year. I specialize in Khmer literature language and am responsible for school discipline management and ICT assistance support.",
       bioKh: "សួស្តី ខ្ញុំឈ្មោះ សេះ សុភារ៉ា ជាគ្រូបន្ទុកថ្នាក់ទី៤ ក្នុងឆ្នាំសិក្សា២០២៦-២០២៧ ជំនាញខាងអក្សរសាស្រ្តខ្មែរ មានតួនាទទួលបន្ទុកផ្នែកគ្រប់គ្រងវិន័យសាលា និងជំនួយការ ICT។",
       metafb: "https://www.facebook.com/jiivorn.g1",
       telegram: "https://t.me/chivorn",
@@ -620,7 +620,7 @@ export const classesData = [
     sessionType: "morning",
     teacher: {
       name: "Mr.Sok Saran", nameKh: "លោកគ្រូ សុខ​ សារ៉ន",
-      title: "Class Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
+      title: "Teacher", titleKh: "គ្រូបន្ទុកថ្នាក់",
       experience: "30 years", experienceKh: "៣០ ឆ្នាំ",
       phone: "089 456 789", email: "sreymom@pralaymeas.edu.kh", avatar: kru_rorn,
       bio: "Enthusiastic teacher blending English, PE and creative exploration.",
@@ -730,7 +730,7 @@ export const classesData = [
     sessionType: "afternoon",
     teacher: {
       name: "Mr. Sam Kosal", nameKh: "លោកគ្រូ សំ កុសល",
-      title: "Senior Teacher", titleKh: "គ្រូជាន់ខ្ពស់",
+      title: "Teacher", titleKh: "គ្រូបន្ទុក",
       experience: "18 years", experienceKh: "១៨ ឆ្នាំ",
       phone: "09695314", email: "Samkolsal@gmail.com", avatar: bongsol,
       bio: "Senior teacher, expert in Mathematic. Passionate about fostering critical thinking and problem-solving skills​ .",

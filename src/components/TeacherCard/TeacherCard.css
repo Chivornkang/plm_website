@@ -39,7 +39,7 @@
 
 .tc-title-badge {
   display: inline-block;
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .8rem;
   font-weight: 700;
   color: var(--cc, #FF8C00);
@@ -51,7 +51,7 @@
 }
 
 .tc-name {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: #2d1a00;
@@ -59,7 +59,7 @@
 }
 
 .tc-bio {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .84rem;
   color: #5a3a0a;
   line-height: 1.7;
@@ -95,7 +95,7 @@
 }
 
 .tc-detail-label {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .67rem;
   font-weight: 700;
   color: #8b6020;

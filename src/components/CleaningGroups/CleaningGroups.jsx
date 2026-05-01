@@ -11,7 +11,7 @@ export default function CleaningGroups({ cleaningGroups, color }) {
   return (
     <div className="cg-wrap" style={{ "--cc": color }}>
       <div className="cg-note">
-        🧹 {kh
+       {kh
           ? "ក្រុមនីមួយៗទទួលខុសត្រូវក្នុងការសំអាតថ្នាក់រៀននៅថ្ងៃដែលត្រូវបានកំណត់។"
           : "Each group is responsible for cleaning the classroom on their assigned day."}
       </div>

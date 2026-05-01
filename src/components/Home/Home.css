@@ -287,8 +287,8 @@
 }
 
 .marquee-text {
-  font-size: 1.1rem;
-  color: #fff;
+  font-size: 1rem;
+  /*nh ot dg tha dak color ry ban som, por sor men? color: #fff; */
   padding: 0 40px;
   display: inline-block;
   font-weight: 500;

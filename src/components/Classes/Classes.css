@@ -1,6 +1,3 @@
-/* Classes.css */
-@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap");
-
 :root {
   --bg: #fffbf4;
   --white: #ffffff;
@@ -10,13 +7,13 @@
   --text-soft: #8b6020;
   --primary: #ff8c00;
   --accent: #ffd166;
-  --fn: "Nunito", sans-serif;
-  --fk: "Kantumruy Pro", sans-serif;
+  --fn: 'DM Sans', 'Noto Serif Khmer', sans-serif;
+  --fk: 'DM Sans', 'Noto Serif Khmer', sans-serif;
 }
-
+/* font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif; */
 .classes-section {
-  font-family: var(--fn);
-  background: var(--bg);
+  /* font-family: var(--fn); */
+  /* background: var(--bg); */
   min-height: 100vh;
   padding: 1.75rem 1.25rem 5rem;
   position: relative;
@@ -29,9 +26,9 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background:
-    radial-gradient(ellipse 55% 38% at 12% 4%, rgba(255, 209, 102, .26) 0%, transparent 65%),
-    radial-gradient(ellipse 42% 28% at 88% 88%, rgba(255, 107, 53, .13) 0%, transparent 60%);
+  /* background:
+    radial-gradient(ellipse 100% 100% at 55% 4%, rgba(255, 209, 102, .26) 5%, transparent 55%),
+    radial-gradient(ellipse 42% 28% at 88% 88%, rgba(255, 107, 53, .13) 0%, transparent 60%); */
 }
 
 .classes-section>* {
@@ -52,7 +49,7 @@
   border: none;
   border-radius: 999px;
   padding: .38rem 1.1rem;
-  font-family: var(--fk);
+  /* font-family: var(--fk); */
   font-size: .84rem;
   font-weight: 700;
   cursor: pointer;
@@ -86,10 +83,10 @@
 }
 
 .page-title {
-  font-family: var(--fn);
+ font-family: 'Moul', serif;
   font-weight: 900;
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 1.15;
+  font-size: clamp(2rem, 2vw, 2rem);
+  /* line-height: 1.15; */
   margin: 5px;
   padding: 10px;
   background: linear-gradient(135deg, #c46b09 0%, #ff6b35 100%);
@@ -100,7 +97,8 @@
 }
 
 .page-sub {
-  font-family: var(--fk);
+  /* font-family: var(--fk); */
+  
   font-size: clamp(.86rem, 2vw, .98rem);
   color: var(--text-mid);
   line-height: 1.8;
@@ -135,6 +133,7 @@
 
 .stat-l {
   font-family: var(--fk);
+  
   font-size: .68rem;
   font-weight: 600;
   color: var(--text-soft);
@@ -166,8 +165,8 @@
   width: 100%;
   text-align: left;
   cursor: pointer;
-  background: var(--white);
-  border: 2px solid var(--border);
+ background: var(--navy-card);
+  border: 1px solid var(--text-soft);
   border-radius: 16px;
   padding: 1.1rem 1.25rem;
   display: flex;
@@ -206,18 +205,20 @@
 }
 
 .cc-grade {
-  font-family: var(--fk);
-  font-size: 1.1rem;
+  /* font-family: var(--fk); */
+  font-family: 'Moul', serif;
+  font-size: .9rem;
   font-weight: 800;
   color: var(--text);
   margin: 0 0 .1rem;
 }
-/* .cc-teacher {
-  font-family: var(--fk);
+.cc-teacher {
+   font-family: 'Moul', serif;
   font-size: .82rem;
-  color: var(--text-mid);
+  font-weight: 900;
+  color: var(--primary);
   margin: 0 0 .4rem;
-} */
+}
 
 .cc-chips {
   display: flex;
@@ -264,6 +265,7 @@
 }
 
 @media (max-width: 580px) {
+
   .cc-grade{ font-size: .98rem; }
   .stats-row {
     flex-direction: column;

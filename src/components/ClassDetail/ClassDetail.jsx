@@ -53,7 +53,7 @@ export default function ClassDetail({ cls, onBack }) {
 
           <section className="cd-section">
             <h3 className="cd-section-title">
-              🧹 {tx.classes.cleaningGroups}
+             {tx.classes.cleaningGroups}
               <span className="cd-section-note">7 {kh ? "នាក់ / ក្រុម" : "students / group"}</span>
             </h3>
             <CleaningGroups cleaningGroups={cls.cleaningGroups} color={cls.color} />

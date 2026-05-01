@@ -131,21 +131,17 @@ const data = {
 
   /* ─── CONTACT PAGE ───────────────────────────────────────────────────── */
   contact: {
-    badge:        { en: 'Get In Touch',    km: 'ទំនាក់ទំនង' },
-    pageTitle:    { en: 'Contact Us',      km: 'ទំនាក់ទំនងមកយើង' },
+    badge:        { en: 'Get In Touch',    km: 'ទាក់ទងសាលា' },
+    pageTitle:    { en: 'Contact Us',      km: 'ទំនាក់ទំនងសាលា' },
     pageSubtitle: { en: 'Contact information and school location', km: 'ទំនាក់ទំនង និងទីតាំងសាលា' },
     address:      { en: 'Address',  km: 'អាសយដ្ឋាន' },
     addressValEn: { en: 'Pralay Meas Commune, Kampong Laeng District, Kampong Chhnang Province', km: 'ឃុំប្រឡាយមាស ស្រុកកំពង់លែង ខេត្តកំពង់ឆ្នាំង' },
     phone:        { en: 'Phone',    km: 'ទូរស័ព្ទ' },
     phoneVal:     { en: '+855 31 636 3963', km: '+855 31 636 3963' },
-    phoneHours:   { en: 'Mon – Sat, 7 AM – 5 PM', km: 'ច័ន្ទ – សៅរ៍ ម៉ោង ៧ – ៥' },
+    phoneHours:   { en: 'Mon – Sat, 7:00 AM – 5:00 PM', km: 'ច័ន្ទ – សៅរ៍ ម៉ោង ៧:០០ – ៥:០០' },
     email:        { en: 'Email',     km: 'អ៊ីម៉ែល' },
     emailVal:     { en: 'pralaymeas@gmail.com', km: 'pralaymeas@gmail.com' },
-    emailNote:    { en: 'We reply within 1–2 days', km: 'ឆ្លើយតបក្នុង ១–២ ថ្ងៃ' },
-    // facebook:     { en: 'Facebook',  km: 'ហ្វេសប៊ុក' },
-    // facebookVal:  { en: 'facebook.com/PralayMeasPrimarySchool', km: 'facebook.com/PralayMeasPrimarySchool' },
-    // facebookName: { en: 'សាលាបឋមសិក្សាប្រឡាយមាស-Pralay Meas Primary School', km: 'សាលាបឋមសិក្សាប្រឡាយមាស-Pralay Meas Primary School' },
-    hoursTitle:   { en: '🕐 School Hours', km: '🕐 ម៉ោងសិក្សា' },
+    hoursTitle:   { en: 'School Hours', km: ' ម៉ោងសិក្សា' },
     hours: [
       {
         dayEn: 'Monday – Saturday', dayKm: 'ច័ន្ទ – សៅរ៍',

@@ -1,7 +1,9 @@
-/* ═══════════════════════════════════════════════════════════════
-   Management.css  —  Org-chart + TeacherCard modal layout
-   ═══════════════════════════════════════════════════════════════ */
 
+/* .mgmt-page{
+   background:
+    radial-gradient(ellipse 100% 100% at 5% 4%, rgba(255, 209, 102, .26) 5%, transparent 40%),
+    radial-gradient(ellipse 42% 28% at 88% 88%, rgba(255, 107, 53, .13) 0%, transparent 60%);
+} */
 .mgmt-content { padding: 3rem 0 5rem; }
 
 /* ── Section header (reuses global styles) ──────────────────── */
@@ -43,7 +45,7 @@
 /* ── Vertical stub connectors ─────────────────────────────── */
 .org-v-stub {
   width: 2px;
-  height: 28px;
+  height: 30px;
   background: linear-gradient(to bottom, rgba(201,151,42,0.8), rgba(201,151,42,0.3));
   flex-shrink: 0;
 }
@@ -61,13 +63,13 @@
 }
 .org-school-node-icon { font-size: 1.8rem; }
 .org-school-node-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   color: var(--gold-light, #e8c070);
   font-size: 0.92rem;
   font-weight: 700;
 }
 .org-school-node-km {
-  font-family: 'Noto Serif Khmer', serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   color: var(--text-muted, #aaa);
   font-size: 0.7rem;
   margin-top: 2px;
@@ -188,8 +190,11 @@ margin-top: 1rem;
 
 /* Text */
 .org-node-role {
-  font-size: 0.6rem;
-  font-weight: 700;
+  margin-bottom: 10px;
+  /* font-family: 'Moul', serif; */
+   font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
+  font-size: .7rem;
+  font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--nc);
@@ -211,7 +216,7 @@ margin-top: 1rem;
 
 /* Hover hint */
 .org-node-hint {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -317,7 +322,7 @@ margin-top: 1rem;
 
   .org-teachers-row  { flex-wrap: wrap; gap: 0.5rem; }
   .org-teacher-col   { max-width: calc(50% - 0.25rem); flex: 0 0 calc(50% - 0.25rem); }
-  .org-h-bar         { display: none; }
+  /* .org-h-bar         { display: none; } */
 }
 
 @media (max-width: 420px) {

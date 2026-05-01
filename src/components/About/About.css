@@ -1,5 +1,10 @@
 @import url('https://googleapis.com');
-
+/* .about-page{
+ 
+   background:
+    radial-gradient(ellipse 100% 100% at 5% 4%, rgba(255, 209, 102, .26) 5%, transparent 30%),
+    radial-gradient(ellipse 42% 28% at 88% 88%, rgba(255, 107, 53, .13) 0%, transparent 60%);
+} */
 .page-hero {
   position: relative;
   padding: 4rem 0 3rem;

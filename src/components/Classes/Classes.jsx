@@ -15,12 +15,12 @@ function ClassCard({ cls, lang, onClick }) {
         <h2 className="cc-grade">{kh ? cls.gradeKh : cls.grade}</h2>
       </div>
       <div className="cc-body">
-        <h2 className="cc-grade">{kh ? cls.teacher.nameKh : cls.teacher.name}</h2>
-        <div className="cc-chips">
+        <h2 className="cc-teacher">{kh ? cls.teacher.nameKh : cls.teacher.name}</h2>
+        {/* <div className="cc-chips">
           <span className="cc-chip">
              {cls.monthlyResults[0]?.students?.length ?? "—"} {tx.classes.students}
           </span>
-        </div>
+        </div> */}
       </div>
       <span className="cc-arrow">›</span>
       <div className="cc-bar" />

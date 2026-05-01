@@ -39,7 +39,7 @@ export default function TeacherCard({ teacher, color }) {
         <div className="tc-identity">
           <div className="tc-title-badge">{kh ? teacher.titleKh : teacher.title}</div>
           <h3 className="tc-name">{kh ? teacher.nameKh : teacher.name}</h3>
-          {bio && <p className="tc-bio">{bio}</p>}
+          {/* {bio && <p className="tc-bio">{bio}</p>} */}
         </div>
       </div>
 

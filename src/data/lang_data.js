@@ -16,6 +16,8 @@ const data = {
     about:      { en: 'About',   km: 'អំពីសាលា' },
     contact:    { en: 'Contact', km: 'ទំនាក់ទំនង' },
     langToggle: { en: 'ខ្មែរ',   km: 'ENG' },
+    headerText1: { en: 'Supporting Khmer Products Starts from Us', km: 'ការគាំទ្រផលិតផលខ្មែរ ចាប់ផ្តើមពីយើងទាំងអស់គ្នា' },
+    // headerText2: { en: 'Starting from Us', km: 'ចាប់ផ្តើមពីយើងទាំងអស់គ្នា' },
   },
 
   /* ─── HOME PAGE ──────────────────────────────────────────────────────── */

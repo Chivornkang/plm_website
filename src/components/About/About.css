@@ -232,11 +232,11 @@
 }
 
 .mission-list li::before {
-  content: '›';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--gold);
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.7;
 }
 

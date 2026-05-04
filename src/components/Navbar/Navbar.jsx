@@ -27,6 +27,13 @@ export default function Navbar({ currentPage, navigate }) {
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="header-row">
+        <img src="assets/royals_Fam/flag_gif.gif" alt="" />
+         <div className="header-text">{tx.navbar.headerText1}</div>
+          <img src="assets/royals_Fam/flag_gif.gif" alt="" />
+      </div>
+    
+     {/* <div className="header-text">{tx.navbar.headerText}</div> */}
       <div className="nav-inner">
         <button className="nav-logo" onClick={() => handleNav('home')}>
           <div className="nav-emblem">

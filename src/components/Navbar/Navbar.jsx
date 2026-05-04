@@ -29,7 +29,7 @@ export default function Navbar({ currentPage, navigate }) {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-row">
         <img src="assets/royals_Fam/flag_gif.gif" alt="" />
-         <div className="header-text">{tx.navbar.headerText1}</div>
+         <div className="header-txt">{tx.navbar.headerText1}</div>
           <img src="assets/royals_Fam/flag_gif.gif" alt="" />
       </div>
     

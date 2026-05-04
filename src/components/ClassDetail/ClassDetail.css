@@ -2,8 +2,7 @@
 .cd-wrap { max-width: 860px; margin: 0 auto; }
 
 /* Back */
-.cd-back {
-  background: none; border: 2px solid #ffe0a0;
+.cd-back { border: 2px solid var(--cc);
   border-radius: 999px; padding: .38rem 1.05rem;
   font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
   font-size: .83rem; font-weight: 700; color: #5a3a0a;
@@ -81,7 +80,8 @@
 .cd-section { margin-bottom: 1.25rem; }
 .cd-section-title {
   font-family: 'DM Sans', 'Noto Serif Khmer', sans-serif;
-  font-size: 1.5rem; font-weight: 800; color: #2d1a00;
+  font-size: 1.5rem; font-weight: 800;
+  
   margin: 0 0 .75rem; display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
 }
 .cd-section-note {

@@ -15,9 +15,9 @@
 
 .nav-inner {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  height: 64px;
+  margin: 2px auto;
+  padding: 0 1rem;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,8 +42,8 @@
 }
 
 .nav-emblem img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: var(--gold);
   color: var(--navy);
@@ -98,9 +98,10 @@
   height: auto;
 }
 
-.header-text {
+.header-txt {
   text-align: center;
-  font-size: clamp(0.9rem, 2vw, 1.4rem);
+  font-size: 1.3rem !important;
+ font-family: 'Noto Serif Khmer', 'Kantumruy Pro', sans-serif;
   place-self: center;
   background: linear-gradient(90deg, #00f, rgb(255, 0, 0), #00f) -100%/ 200%;
 
@@ -108,7 +109,7 @@
   background-clip: text;
 
   color: transparent;
-  font: 900 clamp(1.5em, 1vw, 1em) exo, sans-serif;
+  font: 900 1.3rem 'Noto Serif Khmer', 'Kantumruy Pro', serif;
   animation: shimmer 10s linear infinite;
 }
 
@@ -168,7 +169,7 @@
 }
 
 .nav-en {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--text-muted);
   transition: color var(--transition);
@@ -250,8 +251,8 @@
     width: 35px;
   }
 
-  .header-text {
-    font-size: 0.75rem;
+  .header-txt{
+    font-size: 0.7rem !important;
   }
   .hamburger {
     display: flex;

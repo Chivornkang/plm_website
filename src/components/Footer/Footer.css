@@ -81,7 +81,7 @@
 }
 
 .footer-links {
-  border: #a37820 1px solid;
+  /* border: #a37820 1px solid; */
   justify-self: center;
   display: flex;
   flex-direction: column;

@@ -18,35 +18,35 @@ export default function CleaningGroups({ cleaningGroups, color }) {
 
       <div className="cg-grid">
         {cleaningGroups.map((group, gi) => {
-          const isThursday = gi === 3 
+          // const isThursday = gi === 3 
 
-          if (isThursday) {
-            return (
-              <div
-                key={gi}
-                className="cg-card cg-card--together"
-                style={{ animationDelay: `${gi * 0.065}s` }}
-              >
-                {/* Rotated label */}
-                <div className="cg-together-label">
-                  <span>{kh ? "សម្អាតរួមគ្នា" : "Cleaning Together"}</span>
-                </div>
+          // if (isThursday) {
+          //   return (
+          //     <div
+          //       key={gi}
+          //       className="cg-card cg-card--together"
+          //       style={{ animationDelay: `${gi * 0.065}s` }}
+          //     >
+          //       {/* Rotated label */}
+          //       <div className="cg-together-label">
+          //         <span>{kh ? "សម្អាតរួមគ្នា" : "Cleaning Together"}</span>
+          //       </div>
 
-                {/* Day header */}
-                <div className="cg-day-header">
-                  {/* <span className="cg-day-icon">{DAY_ICONS[gi]}</span> */}
-                  <div>
-                    <div className="cg-day-name">
-                      {kh ? (DAYS_KH[gi] ?? `ថ្ងៃ ${gi + 1}`) : (DAYS_EN[gi] ?? `Day ${gi + 1}`)}
-                    </div>
-                    <div className="cg-member-count">
-                      {kh ? "ទាំងអស់" : "All students"} 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )
-          }
+          //       {/* Day header */}
+          //       <div className="cg-day-header">
+          //         {/* <span className="cg-day-icon">{DAY_ICONS[gi]}</span> */}
+          //         <div>
+          //           <div className="cg-day-name">
+          //             {kh ? (DAYS_KH[gi] ?? `ថ្ងៃ ${gi + 1}`) : (DAYS_EN[gi] ?? `Day ${gi + 1}`)}
+          //           </div>
+          //           <div className="cg-member-count">
+          //             {kh ? "ទាំងអស់" : "All students"} 
+          //           </div>
+          //         </div>
+          //       </div>
+          //     </div>
+          //   )
+          // }
 
           return (
             <div key={gi} className="cg-card" style={{ animationDelay: `${gi * 0.065}s` }}>
